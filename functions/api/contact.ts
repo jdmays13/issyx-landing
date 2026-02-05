@@ -13,15 +13,19 @@ interface ContactForm {
   message?: string;
 }
 
-export const onRequestPost: PagesFunction<Env> = async (context) => {
-  const corsHeaders = {
-    'Access-Control-Allow-Origin': 'https://issyx.com',
-    'Access-Control-Allow-Methods': 'POST',
-    'Access-Control-Allow-Headers': 'Content-Type',
-  };
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
 
+export function handleContactCors(): Response {
+  return new Response(null, { headers: corsHeaders });
+}
+
+export async function handleContactForm(request: Request, env: Env): Promise<Response> {
   try {
-    const body = (await context.request.json()) as ContactForm;
+    const body = (await request.json()) as ContactForm;
 
     // Validate required fields
     if (!body.firstName || !body.lastName || !body.email || !body.company) {
@@ -39,13 +43,13 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       );
     }
 
-    const contactEmail = context.env.CONTACT_EMAIL || 'sales@issyx.com';
+    const contactEmail = env.CONTACT_EMAIL || 'sales@issyx.com';
 
     // Send notification email via Resend
     const resendResponse = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${context.env.RESEND_API_KEY}`,
+        'Authorization': `Bearer ${env.RESEND_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -101,7 +105,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     // TODO: Add ERPNext CRM Lead creation here when ready
     // const erpResponse = await fetch('https://erp.issyx.com/api/resource/Lead', {
     //   method: 'POST',
-    //   headers: { 'Authorization': `token ${context.env.ERP_API_KEY}` },
+    //   headers: { 'Authorization': `token ${env.ERP_API_KEY}` },
     //   body: JSON.stringify({
     //     lead_name: `${body.firstName} ${body.lastName}`,
     //     email_id: body.email,
@@ -122,18 +126,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       { status: 500, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
     );
   }
-};
-
-// Handle CORS preflight
-export const onRequestOptions: PagesFunction = async () => {
-  return new Response(null, {
-    headers: {
-      'Access-Control-Allow-Origin': 'https://issyx.com',
-      'Access-Control-Allow-Methods': 'POST',
-      'Access-Control-Allow-Headers': 'Content-Type',
-    },
-  });
-};
+}
 
 function escapeHtml(str: string): string {
   return str
