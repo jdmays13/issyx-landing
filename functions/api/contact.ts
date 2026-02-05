@@ -29,7 +29,7 @@ export async function handleContactForm(request: Request, env: Env): Promise<Res
     if (!env.RESEND_API_KEY) {
       console.error('RESEND_API_KEY is not configured');
       return new Response(
-        JSON.stringify({ error: 'Email service not configured. Please email us directly at sales@issyx.com' }),
+        JSON.stringify({ error: 'Email service not configured. Please email us directly at hello@issyx.com' }),
         { status: 503, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
       );
     }
@@ -52,7 +52,7 @@ export async function handleContactForm(request: Request, env: Env): Promise<Res
       );
     }
 
-    const contactEmail = env.CONTACT_EMAIL || 'sales@issyx.com';
+    const contactEmail = env.CONTACT_EMAIL || 'hello@issyx.com';
 
     // Send notification email via Resend
     const resendResponse = await fetch('https://api.resend.com/emails', {
@@ -106,7 +106,7 @@ export async function handleContactForm(request: Request, env: Env): Promise<Res
       const error = await resendResponse.text();
       console.error('Resend API error:', error);
       return new Response(
-        JSON.stringify({ error: 'Failed to send message. Please email us directly at sales@issyx.com' }),
+        JSON.stringify({ error: 'Failed to send message. Please email us directly at hello@issyx.com' }),
         { status: 502, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
       );
     }

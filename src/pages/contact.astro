@@ -29,7 +29,7 @@ import Footer from '../components/Footer.astro';
               </div>
               <div>
                 <h3 class="font-semibold text-white mb-1">Email</h3>
-                <a href="mailto:sales@issyx.com" class="text-gray-400 hover:text-primary-400 transition-colors">sales@issyx.com</a>
+                <a href="mailto:hello@issyx.com" class="text-gray-400 hover:text-primary-400 transition-colors">hello@issyx.com</a>
               </div>
             </div>
 
@@ -261,12 +261,12 @@ import Footer from '../components/Footer.astro';
         successMessage?.classList.remove('hidden');
       } else {
         const result = await response.json();
-        showError(result.error || 'Something went wrong. Please try again or email us at sales@issyx.com');
+        showError(result.error || 'Something went wrong. Please try again or email us at hello@issyx.com');
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
       }
     } catch {
-      showError('Network error. Please try again or email us at sales@issyx.com');
+      showError('Network error. Please try again or email us at hello@issyx.com');
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
     }
