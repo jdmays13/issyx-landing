@@ -4,7 +4,7 @@ import FeatureShowcase from './FeatureShowcase.astro';
 // Screenshot recommendations when ready to replace mockups:
 // 1. Device Lifecycle: Devices page showing a filtered list with various statuses (deployed, imaging, offboarding)
 // 2. Zero-Touch Deployment: MDM enrollment profiles page or a device showing Autopilot enrollment progress
-// 3. Mass Imaging: Imaging Jobs page showing active multicast session with progress bars
+// 3. Mass Imaging: Imaging Jobs page showing active batch imaging session with progress bars
 // 4. Warehouse Operations: Warehouse dashboard with stats cards, incoming shipments, and job queue
 
 const features = [
@@ -41,11 +41,11 @@ const features = [
   {
     tag: 'Mass Imaging',
     title: 'Image hundreds of devices at once',
-    subtitle: 'PXE boot, multicast, zero manual effort.',
-    description: 'Our imaging system handles mass deployments with ease. Boot devices over the network, stream images via multicast, and deploy custom profiles with drivers, software, and configurations baked in.',
+    subtitle: 'PXE boot, zero manual effort.',
+    description: 'Our imaging system handles mass deployments with ease. Boot devices over the network, deploy custom profiles with drivers, software, and configurations baked in — all managed from a single dashboard.',
     features: [
       'PXE boot detection and automatic imaging',
-      'Multicast deployment for simultaneous imaging',
+      'HTTP Fan-Out for high-speed image distribution',
       'Custom imaging profiles with software bundles',
       'Driver injection and hardware compatibility',
       'Post-imaging scripts and domain join automation',
@@ -284,12 +284,12 @@ const features = [
         </div>
         <!-- Content -->
         <div class="p-4 bg-dark-bg/80">
-          <!-- Active Session Banner -->
+          <!-- Active Batch Banner -->
           <div class="mb-4 p-3 rounded-lg bg-amber-600/10 border border-amber-600/30">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-2">
                 <div class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
-                <span class="text-sm font-medium text-amber-400">Multicast Session Active</span>
+                <span class="text-sm font-medium text-amber-400">Batch Imaging Active</span>
               </div>
               <span class="text-xs text-amber-400/70">24 devices • Win11 Enterprise</span>
             </div>
