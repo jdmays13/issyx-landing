@@ -25,6 +25,15 @@ export function handleContactCors(): Response {
 
 export async function handleContactForm(request: Request, env: Env): Promise<Response> {
   try {
+    // Check if API key is configured
+    if (!env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not configured');
+      return new Response(
+        JSON.stringify({ error: 'Email service not configured. Please email us directly at sales@issyx.com' }),
+        { status: 503, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
+      );
+    }
+
     const body = (await request.json()) as ContactForm;
 
     // Validate required fields
