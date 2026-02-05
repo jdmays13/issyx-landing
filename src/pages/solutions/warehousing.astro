@@ -1,0 +1,708 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Warehousing & Logistics - Issyx Unified" description="Device warehousing, service orders, shipment tracking, and logistics services. Store, configure, and deploy devices with full visibility.">
+  <Navbar />
+  <main>
+    <!-- Hero -->
+    <section class="pt-32 pb-24 px-6 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-amber-900/20 to-transparent"></div>
+      <div class="max-w-7xl mx-auto relative">
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 mb-6">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+            <span class="text-sm text-amber-400">Warehousing & Logistics</span>
+          </span>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            Your devices, stored and shipped <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">with full visibility</span>
+          </h1>
+          <p class="text-xl text-gray-400 mb-8">
+            We handle the physical logistics so you don't have to. Secure storage, service order processing, and shipment tracking—all managed from the Issyx platform.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="btn-primary text-lg">Request a Demo</a>
+            <a href="#service-orders" class="btn-secondary text-lg">See Features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Orders System -->
+    <section id="service-orders" class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-slide-left">
+            <span class="text-amber-400 text-sm font-semibold uppercase tracking-wider">Service Orders</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Complete order <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">workflow management</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Create and manage service orders from draft through completion. Track every device from receiving through imaging and shipping with a complete audit trail.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Order Status Workflow</h3>
+                  <p class="text-gray-400 text-sm">Nine distinct statuses: draft, pending inbound, receiving, pending processing, processing, pending outbound, shipping, completed, and cancelled.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Device Manifest</h3>
+                  <p class="text-gray-400 text-sm">Pre-populate expected devices before submission. Track per-device status from expected through delivered.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Complete Audit Trail</h3>
+                  <p class="text-gray-400 text-sm">Every order event tracked with timestamps and actor information—created, submitted, device received, processing started, completed.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Saved Order Profiles</h3>
+                  <p class="text-gray-400 text-sm">Create reusable order templates with imaging profiles, engraving settings, and outbound configuration.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative animate-slide-right">
+            <div class="rounded-2xl bg-gradient-to-br from-amber-600/20 to-orange-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-white font-semibold">Service Order SO-2026-00142</h3>
+                  <span class="px-2 py-1 rounded text-xs bg-blue-500/20 text-blue-400">Processing</span>
+                </div>
+                <div class="space-y-4">
+                  <div class="grid grid-cols-2 gap-4">
+                    <div class="p-3 bg-dark-surface rounded-lg">
+                      <div class="text-gray-500 text-xs mb-1">Expected Devices</div>
+                      <div class="text-white font-medium">25</div>
+                    </div>
+                    <div class="p-3 bg-dark-surface rounded-lg">
+                      <div class="text-gray-500 text-xs mb-1">Received</div>
+                      <div class="text-white font-medium">25</div>
+                    </div>
+                    <div class="p-3 bg-dark-surface rounded-lg">
+                      <div class="text-gray-500 text-xs mb-1">Imaged</div>
+                      <div class="text-amber-400 font-medium">18</div>
+                    </div>
+                    <div class="p-3 bg-dark-surface rounded-lg">
+                      <div class="text-gray-500 text-xs mb-1">Ready to Ship</div>
+                      <div class="text-green-400 font-medium">15</div>
+                    </div>
+                  </div>
+                  <div class="pt-4 border-t border-dark-border">
+                    <div class="flex items-center justify-between text-sm mb-2">
+                      <span class="text-gray-400">Progress</span>
+                      <span class="text-white">72%</span>
+                    </div>
+                    <div class="h-2 bg-dark-surface rounded-full overflow-hidden">
+                      <div class="h-full bg-amber-500 rounded-full" style="width: 72%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Device Receiving -->
+    <section class="py-24 px-6 bg-dark-surface/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1 animate-slide-left">
+            <div class="rounded-2xl bg-gradient-to-br from-amber-600/20 to-orange-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-white font-semibold">Device Scanning</h3>
+                  <span class="flex items-center gap-2 text-green-400 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                    Rapid Mode
+                  </span>
+                </div>
+                <div class="p-4 bg-dark-surface rounded-lg mb-4">
+                  <input type="text" placeholder="Scan serial number..." class="w-full bg-transparent text-white placeholder-gray-500 focus:outline-none text-lg" />
+                </div>
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span class="text-white text-sm">5CG1234567</span>
+                    </div>
+                    <span class="text-gray-500 text-xs">Just now</span>
+                  </div>
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span class="text-white text-sm">5CG7654321</span>
+                    </div>
+                    <span class="text-gray-500 text-xs">5s ago</span>
+                  </div>
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span class="text-white text-sm">5CG9876543</span>
+                    </div>
+                    <span class="text-gray-500 text-xs">12s ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2 animate-slide-right">
+            <span class="text-amber-400 text-sm font-semibold uppercase tracking-wider">Device Receiving</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Rapid barcode <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">scanning and receiving</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Receive devices quickly with rapid scan mode. Scan serial numbers, match to manifests, and detect duplicates automatically. Every scan logs the device with a timestamp.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Rapid Scan Mode</h3>
+                  <p class="text-gray-400 text-sm">Enter key submits, modal stays open, and feedback messages confirm each scan.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Manifest Matching</h3>
+                  <p class="text-gray-400 text-sm">Incoming devices are matched to expected manifest entries by serial number or expected device ID.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Duplicate Detection</h3>
+                  <p class="text-gray-400 text-sm">Prevents scanning the same serial twice in the same order.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Warehouse Operations Dashboard -->
+    <section class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-slide-left">
+            <span class="text-amber-400 text-sm font-semibold uppercase tracking-wider">Operations Dashboard</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Real-time <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">warehouse visibility</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Monitor your entire warehouse operation from one dashboard. Track incoming shipments, processing queues, ready-to-ship inventory, and identify at-risk jobs before they become problems.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Live Statistics</h3>
+                  <p class="text-gray-400 text-sm">Devices in warehouse, incoming shipments, receiving queue, pending jobs, jobs in progress, and ready to ship counts.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">At-Risk Job Detection</h3>
+                  <p class="text-gray-400 text-sm">Jobs stalled for more than 24 hours flagged with warning, escalating to error at 48 hours. Imaging stuck detection at 4 hours.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">TV Mode</h3>
+                  <p class="text-gray-400 text-sm">Full-screen display mode optimized for warehouse floor monitors.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative animate-slide-right">
+            <div class="rounded-2xl bg-gradient-to-br from-amber-600/20 to-orange-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-white font-semibold">Warehouse Dashboard</h3>
+                  <span class="flex items-center gap-2 text-green-400 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                    Live
+                  </span>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                  <div class="p-4 bg-dark-surface rounded-lg">
+                    <div class="text-3xl font-bold text-white">147</div>
+                    <div class="text-gray-500 text-sm">Devices in Warehouse</div>
+                  </div>
+                  <div class="p-4 bg-dark-surface rounded-lg">
+                    <div class="text-3xl font-bold text-amber-400">12</div>
+                    <div class="text-gray-500 text-sm">Incoming Today</div>
+                  </div>
+                  <div class="p-4 bg-dark-surface rounded-lg">
+                    <div class="text-3xl font-bold text-blue-400">23</div>
+                    <div class="text-gray-500 text-sm">Jobs in Progress</div>
+                  </div>
+                  <div class="p-4 bg-dark-surface rounded-lg">
+                    <div class="text-3xl font-bold text-green-400">35</div>
+                    <div class="text-gray-500 text-sm">Ready to Ship</div>
+                  </div>
+                </div>
+                <div class="p-3 bg-red-500/10 border border-red-500/20 rounded-lg">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    <span class="text-red-400 text-sm">2 at-risk jobs (stalled 48h+)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shipments -->
+    <section class="py-24 px-6 bg-dark-surface/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1 animate-slide-left">
+            <div class="rounded-2xl bg-gradient-to-br from-amber-600/20 to-orange-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <h3 class="text-white font-semibold mb-4">Shipment Types</h3>
+                <div class="space-y-3">
+                  <div class="p-4 bg-dark-surface rounded-lg">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-white font-medium">Return Kit</span>
+                      <span class="text-amber-400 text-sm">To User</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Pre-packaged kit with return label and instructions sent to employee.</p>
+                  </div>
+                  <div class="p-4 bg-dark-surface rounded-lg">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-white font-medium">Device Return</span>
+                      <span class="text-blue-400 text-sm">To Issyx</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Standard return with printed label for returning devices to warehouse.</p>
+                  </div>
+                  <div class="p-4 bg-dark-surface rounded-lg">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-white font-medium">QR Code Return</span>
+                      <span class="text-blue-400 text-sm">To Issyx</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">USPS-based return with QR code for convenient drop-off at any post office.</p>
+                  </div>
+                  <div class="p-4 bg-dark-surface rounded-lg">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-white font-medium">New Deployment</span>
+                      <span class="text-green-400 text-sm">To User</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Outbound shipment with signature confirmation for new device deployment.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2 animate-slide-right">
+            <span class="text-amber-400 text-sm font-semibold uppercase tracking-wider">Shipments</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Multi-carrier <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">shipping integration</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Create shipments with EasyPost multi-carrier integration. Automatic lowest rate selection, tracking number generation, and shipping label creation.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">EasyPost Integration</h3>
+                  <p class="text-gray-400 text-sm">Automatic carrier rate comparison and lowest rate selection.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Label Generation</h3>
+                  <p class="text-gray-400 text-sm">PDF shipping labels and QR code URLs for drop-off returns.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Live Tracking</h3>
+                  <p class="text-gray-400 text-sm">Real-time tracking status with carrier tracking events and estimated delivery dates.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outbound Modes -->
+    <section class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-slide-left">
+            <span class="text-amber-400 text-sm font-semibold uppercase tracking-wider">Outbound Configuration</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Flexible <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">shipping options</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Configure how devices ship after processing. Return bulk shipments to a single customer address or ship individual devices directly to end users.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Return to Customer</h3>
+                  <p class="text-gray-400 text-sm">Ship all processed devices back to a single customer address in bulk.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Ship to Users</h3>
+                  <p class="text-gray-400 text-sm">Send individual devices directly to end users with per-device recipient information.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Per-Device Engraving</h3>
+                  <p class="text-gray-400 text-sm">Side A and Side B engraving text per device using template variables.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative animate-slide-right">
+            <div class="rounded-2xl bg-gradient-to-br from-amber-600/20 to-orange-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <h3 class="text-white font-semibold mb-4">Outbound Mode</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-dark-surface rounded-lg border-2 border-amber-500/50">
+                    <div class="flex items-center gap-3 mb-2">
+                      <div class="w-5 h-5 rounded-full bg-amber-500 flex items-center justify-center">
+                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                      <span class="text-white font-medium">Ship to Users</span>
+                    </div>
+                    <p class="text-gray-500 text-sm ml-8">Each device ships individually to assigned recipient</p>
+                  </div>
+                  <div class="p-4 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                      <div class="w-5 h-5 rounded-full border-2 border-gray-600"></div>
+                      <span class="text-gray-400 font-medium">Return to Customer</span>
+                    </div>
+                    <p class="text-gray-600 text-sm ml-8">All devices ship to customer address</p>
+                  </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-dark-border">
+                  <div class="text-gray-500 text-xs mb-2">Devices with Recipients</div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-white font-medium">18 / 25</span>
+                    <span class="text-amber-400 text-xs">7 pending assignment</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Service Portal -->
+    <section class="py-24 px-6 bg-dark-surface/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1 animate-slide-left">
+            <div class="rounded-2xl bg-gradient-to-br from-amber-600/20 to-orange-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <h3 class="text-white font-semibold mb-4">Customer Portal</h3>
+                <div class="flex gap-2 mb-4 border-b border-dark-border pb-3">
+                  <button class="px-3 py-1.5 rounded-lg bg-amber-500/20 text-amber-400 text-sm font-medium">Overview</button>
+                  <button class="px-3 py-1.5 rounded-lg text-gray-500 text-sm">Orders</button>
+                  <button class="px-3 py-1.5 rounded-lg text-gray-500 text-sm">Imaging</button>
+                  <button class="px-3 py-1.5 rounded-lg text-gray-500 text-sm">Shipments</button>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="p-3 bg-dark-surface rounded-lg text-center">
+                    <div class="text-2xl font-bold text-white">3</div>
+                    <div class="text-gray-500 text-xs">Active Orders</div>
+                  </div>
+                  <div class="p-3 bg-dark-surface rounded-lg text-center">
+                    <div class="text-2xl font-bold text-blue-400">12</div>
+                    <div class="text-gray-500 text-xs">Jobs in Progress</div>
+                  </div>
+                  <div class="p-3 bg-dark-surface rounded-lg text-center">
+                    <div class="text-2xl font-bold text-amber-400">5</div>
+                    <div class="text-gray-500 text-xs">Pending Jobs</div>
+                  </div>
+                  <div class="p-3 bg-dark-surface rounded-lg text-center">
+                    <div class="text-2xl font-bold text-green-400">2</div>
+                    <div class="text-gray-500 text-xs">In Transit</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2 animate-slide-right">
+            <span class="text-amber-400 text-sm font-semibold uppercase tracking-wider">Customer Portal</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Self-service <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">order tracking</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Give your customers visibility into their service work. The customer portal shows active orders, imaging job progress, and shipment tracking—all without needing to contact support.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Order Overview</h3>
+                  <p class="text-gray-400 text-sm">Summary cards showing active orders, jobs in progress, pending jobs, and shipments in transit.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Device-Level Tracking</h3>
+                  <p class="text-gray-400 text-sm">See status for each device in an order with timestamps for received, imaged, and shipped.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Create New Orders</h3>
+                  <p class="text-gray-400 text-sm">Customers can submit new service orders with imaging profiles, engraving settings, and outbound configuration.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Imaging Integration -->
+    <section class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-slide-left">
+            <span class="text-amber-400 text-sm font-semibold uppercase tracking-wider">Imaging Integration</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Automatic <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">imaging jobs</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              When processing starts on a service order, imaging jobs are automatically created for all received devices. Track imaging progress alongside the order workflow.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Automatic Job Creation</h3>
+                  <p class="text-gray-400 text-sm">Start processing creates imaging jobs for all received devices in the order.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Profile Assignment</h3>
+                  <p class="text-gray-400 text-sm">Use the imaging profile configured on the service order for all devices.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center text-amber-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Engraving Support</h3>
+                  <p class="text-gray-400 text-sm">Enable engraving with Side A and Side B templates using variables like employee name or serial number.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative animate-slide-right">
+            <div class="rounded-2xl bg-gradient-to-br from-amber-600/20 to-orange-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <h3 class="text-white font-semibold mb-4">Order Processing</h3>
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <div class="w-8 h-8 rounded bg-green-600/20 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-white text-sm font-medium">5CG1234567</div>
+                        <div class="text-gray-500 text-xs">Imaged • Ready</div>
+                      </div>
+                    </div>
+                    <span class="px-2 py-1 rounded text-xs bg-green-500/20 text-green-400">Complete</span>
+                  </div>
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <div class="w-8 h-8 rounded bg-blue-600/20 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-blue-400 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-white text-sm font-medium">5CG7654321</div>
+                        <div class="text-gray-500 text-xs">Imaging in progress • 67%</div>
+                      </div>
+                    </div>
+                    <span class="px-2 py-1 rounded text-xs bg-blue-500/20 text-blue-400">Imaging</span>
+                  </div>
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <div class="w-8 h-8 rounded bg-amber-600/20 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-white text-sm font-medium">5CG9876543</div>
+                        <div class="text-gray-500 text-xs">Pending imaging</div>
+                      </div>
+                    </div>
+                    <span class="px-2 py-1 rounded text-xs bg-amber-500/20 text-amber-400">Queued</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to outsource your device logistics?</h2>
+        <p class="text-xl text-gray-400 mb-8">Let us handle the warehousing while you focus on your business.</p>
+        <a href="/contact" class="btn-primary text-lg">Schedule a Demo</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,821 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Mobile Device Management - Issyx Unified" description="Cross-platform MDM for Windows, macOS, iOS, and Android. Zero-touch enrollment, kiosk mode, remote view, policy management, and remote control.">
+  <Navbar />
+  <main>
+    <!-- Hero -->
+    <section class="pt-32 pb-24 px-6 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-green-900/20 to-transparent"></div>
+      <div class="max-w-7xl mx-auto relative">
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 mb-6">
+            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+            <span class="text-sm text-green-400">Mobile Device Management</span>
+          </span>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            Manage every device from <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">one platform</span>
+          </h1>
+          <p class="text-xl text-gray-400 mb-8">
+            Cross-platform MDM that works with Windows Autopilot, Apple DEP, and Android Enterprise. Zero-touch enrollment, kiosk mode, remote view, and comprehensive policy management for your entire fleet.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="btn-primary text-lg">Request a Demo</a>
+            <a href="#zero-touch" class="btn-secondary text-lg">See Features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zero-Touch Enrollment -->
+    <section id="zero-touch" class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-slide-left">
+            <span class="text-green-400 text-sm font-semibold uppercase tracking-wider">Zero-Touch Enrollment</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Devices that <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">configure themselves</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Ship devices directly to employees anywhere in the world. When they power on and connect to the internet, they automatically enroll in your MDM and apply your security policies.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Windows Autopilot</h3>
+                  <p class="text-gray-400 text-sm">User-driven, self-deploying, and pre-provisioning deployment modes. Devices configure themselves on first boot.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Apple DEP</h3>
+                  <p class="text-gray-400 text-sm">Device Enrollment Program for iOS, iPadOS, and macOS. Supervision enabled, MDM profiles applied before the user sees the desktop.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Android Enterprise</h3>
+                  <p class="text-gray-400 text-sm">Zero-touch enrollment with pre-registration by serial number, IMEI, or MAC address. QR code enrollment as fallback.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Pre-Registration</h3>
+                  <p class="text-gray-400 text-sm">Register devices before they're powered on. Assign policies and users in advance for seamless day-one deployment.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative animate-slide-right">
+            <div class="rounded-2xl bg-gradient-to-br from-green-600/20 to-emerald-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <h3 class="text-white font-semibold mb-4">Pre-Registration</h3>
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <div class="w-8 h-8 rounded bg-blue-600/20 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-white text-sm font-medium">5CG1234567</div>
+                        <div class="text-gray-500 text-xs">Windows • Dell XPS 15</div>
+                      </div>
+                    </div>
+                    <span class="px-2 py-1 rounded text-xs bg-amber-500/20 text-amber-400">Pending</span>
+                  </div>
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <div class="w-8 h-8 rounded bg-green-600/20 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 00-.83.22l-1.88 3.24a11.463 11.463 0 00-8.94 0L5.65 5.67a.643.643 0 00-.87-.2c-.28.18-.37.54-.22.83L6.4 9.48A10.78 10.78 0 001 18h22a10.78 10.78 0 00-5.4-8.52z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-white text-sm font-medium">359876543210</div>
+                        <div class="text-gray-500 text-xs">Android • Samsung Galaxy</div>
+                      </div>
+                    </div>
+                    <span class="px-2 py-1 rounded text-xs bg-green-500/20 text-green-400">Enrolled</span>
+                  </div>
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <div class="w-8 h-8 rounded bg-gray-600/20 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-white text-sm font-medium">C07X12345</div>
+                        <div class="text-gray-500 text-xs">macOS • MacBook Pro</div>
+                      </div>
+                    </div>
+                    <span class="px-2 py-1 rounded text-xs bg-amber-500/20 text-amber-400">Pending</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Policy Management -->
+    <section class="py-24 px-6 bg-dark-surface/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1 animate-slide-left">
+            <div class="rounded-2xl bg-gradient-to-br from-green-600/20 to-emerald-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-white font-semibold">Windows Security Policy</h3>
+                  <span class="px-2 py-1 rounded text-xs bg-green-500/20 text-green-400">Active</span>
+                </div>
+                <div class="space-y-4">
+                  <div class="p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-gray-400 text-sm">BitLocker Encryption</span>
+                      <span class="text-green-400 text-sm">Enabled</span>
+                    </div>
+                    <div class="text-xs text-gray-500">XTS-AES 256-bit • TPM required • Recovery key escrowed</div>
+                  </div>
+                  <div class="p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-gray-400 text-sm">Windows Defender</span>
+                      <span class="text-green-400 text-sm">Enabled</span>
+                    </div>
+                    <div class="text-xs text-gray-500">Real-time + Cloud protection • Tamper protection on</div>
+                  </div>
+                  <div class="p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-gray-400 text-sm">Windows Firewall</span>
+                      <span class="text-green-400 text-sm">Enabled</span>
+                    </div>
+                    <div class="text-xs text-gray-500">Domain, Private, Public profiles configured</div>
+                  </div>
+                  <div class="p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-gray-400 text-sm">Windows Update</span>
+                      <span class="text-blue-400 text-sm">Managed</span>
+                    </div>
+                    <div class="text-xs text-gray-500">Auto-update • Feature deferral 30 days • Quality deferral 7 days</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2 animate-slide-right">
+            <span class="text-green-400 text-sm font-semibold uppercase tracking-wider">Policy Management</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Platform-specific <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">security policies</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Create comprehensive security policies tailored to each platform. Policies sync to the native MDM systems—Intune for Windows, Apple MDM for iOS/macOS, and Google Android Management for Android.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Windows</h3>
+                  <p class="text-gray-400 text-sm">BitLocker encryption, Windows Defender, Firewall, Windows Update management, device restrictions, Autopilot profiles.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 00-.83.22l-1.88 3.24a11.463 11.463 0 00-8.94 0L5.65 5.67a.643.643 0 00-.87-.2c-.28.18-.37.54-.22.83L6.4 9.48A10.78 10.78 0 001 18h22a10.78 10.78 0 00-5.4-8.52z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Android</h3>
+                  <p class="text-gray-400 text-sm">Work profile separation, passcode requirements, runtime permissions, app management, Factory Reset Protection, VPN always-on.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-gray-600/20 flex items-center justify-center text-gray-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">iOS / macOS</h3>
+                  <p class="text-gray-400 text-sm">Supervised mode, app management, Shared iPad support, Lost Mode, passcode policies, content filtering.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Remote Commands -->
+    <section class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-slide-left">
+            <span class="text-green-400 text-sm font-semibold uppercase tracking-wider">Remote Commands</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Execute commands <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">instantly</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Respond to security incidents in seconds. Lock, wipe, or locate any device from the console. Commands route through the Issyx agent for desktop devices or the external MDM for mobile devices.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-4 bg-dark-surface border border-dark-border rounded-xl">
+                <h3 class="font-semibold text-white mb-1">Lock</h3>
+                <p class="text-gray-500 text-sm">Lock screen with optional message</p>
+              </div>
+              <div class="p-4 bg-dark-surface border border-dark-border rounded-xl">
+                <h3 class="font-semibold text-white mb-1">Wipe</h3>
+                <p class="text-gray-500 text-sm">Remote factory reset with reason</p>
+              </div>
+              <div class="p-4 bg-dark-surface border border-dark-border rounded-xl">
+                <h3 class="font-semibold text-white mb-1">Restart</h3>
+                <p class="text-gray-500 text-sm">Force device reboot</p>
+              </div>
+              <div class="p-4 bg-dark-surface border border-dark-border rounded-xl">
+                <h3 class="font-semibold text-white mb-1">Locate</h3>
+                <p class="text-gray-500 text-sm">Get current location</p>
+              </div>
+              <div class="p-4 bg-dark-surface border border-dark-border rounded-xl">
+                <h3 class="font-semibold text-white mb-1">Ring</h3>
+                <p class="text-gray-500 text-sm">Play audio alert</p>
+              </div>
+              <div class="p-4 bg-dark-surface border border-dark-border rounded-xl">
+                <h3 class="font-semibold text-white mb-1">Lost Mode</h3>
+                <p class="text-gray-500 text-sm">iOS lost mode with message</p>
+              </div>
+              <div class="p-4 bg-dark-surface border border-dark-border rounded-xl">
+                <h3 class="font-semibold text-white mb-1">Reset Password</h3>
+                <p class="text-gray-500 text-sm">Clear or reset passcode</p>
+              </div>
+              <div class="p-4 bg-dark-surface border border-dark-border rounded-xl">
+                <h3 class="font-semibold text-white mb-1">Sync</h3>
+                <p class="text-gray-500 text-sm">Force immediate check-in</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative animate-slide-right">
+            <div class="rounded-2xl bg-gradient-to-br from-green-600/20 to-emerald-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <h3 class="text-white font-semibold mb-4">Command History</h3>
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <div class="w-8 h-8 rounded bg-red-600/20 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-white text-sm font-medium">Lock Device</div>
+                        <div class="text-gray-500 text-xs">Dell XPS 15 • 2m ago</div>
+                      </div>
+                    </div>
+                    <span class="px-2 py-1 rounded text-xs bg-green-500/20 text-green-400">Completed</span>
+                  </div>
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <div class="w-8 h-8 rounded bg-blue-600/20 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-white text-sm font-medium">Force Sync</div>
+                        <div class="text-gray-500 text-xs">MacBook Pro • 5m ago</div>
+                      </div>
+                    </div>
+                    <span class="px-2 py-1 rounded text-xs bg-green-500/20 text-green-400">Completed</span>
+                  </div>
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <div class="w-8 h-8 rounded bg-amber-600/20 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-white text-sm font-medium">Locate Device</div>
+                        <div class="text-gray-500 text-xs">Samsung Galaxy • 12m ago</div>
+                      </div>
+                    </div>
+                    <span class="px-2 py-1 rounded text-xs bg-amber-500/20 text-amber-400">Pending</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kiosk Mode -->
+    <section class="py-24 px-6 bg-dark-surface/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1 animate-slide-left">
+            <div class="rounded-2xl bg-gradient-to-br from-green-600/20 to-emerald-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <h3 class="text-white font-semibold mb-4">Kiosk Configuration</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-dark-surface rounded-lg">
+                    <div class="flex items-center justify-between mb-3">
+                      <span class="text-white font-medium">Kiosk App</span>
+                      <span class="text-green-400 text-sm">Single App Mode</span>
+                    </div>
+                    <div class="text-gray-400 text-sm">com.company.posapp</div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-3">
+                    <div class="p-3 bg-dark-surface rounded-lg">
+                      <div class="text-gray-500 text-xs mb-1">Navigation</div>
+                      <div class="text-white text-sm">Disabled</div>
+                    </div>
+                    <div class="p-3 bg-dark-surface rounded-lg">
+                      <div class="text-gray-500 text-xs mb-1">Status Bar</div>
+                      <div class="text-white text-sm">Hidden</div>
+                    </div>
+                    <div class="p-3 bg-dark-surface rounded-lg">
+                      <div class="text-gray-500 text-xs mb-1">Power Button</div>
+                      <div class="text-white text-sm">Locked</div>
+                    </div>
+                    <div class="p-3 bg-dark-surface rounded-lg">
+                      <div class="text-gray-500 text-xs mb-1">Settings</div>
+                      <div class="text-white text-sm">Blocked</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2 animate-slide-right">
+            <span class="text-green-400 text-sm font-semibold uppercase tracking-wider">Kiosk Mode</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Dedicated devices for <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">single-purpose use</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Lock devices to a single application or a curated set of apps. Control system navigation, status bar visibility, power button actions, and settings access.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Single App Mode</h3>
+                  <p class="text-gray-400 text-sm">Lock device to one application with no way for users to exit or access settings.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Multi-App Kiosk</h3>
+                  <p class="text-gray-400 text-sm">Allow access to a specific set of approved applications only.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">URL-Based Kiosk</h3>
+                  <p class="text-gray-400 text-sm">Launch directly to a web URL for browser-based kiosk applications.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Remote View -->
+    <section class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-slide-left">
+            <span class="text-green-400 text-sm font-semibold uppercase tracking-wider">Remote View</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              See what users see <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">in real time</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Request remote screen viewing sessions to troubleshoot devices without physical access. Platform-specific capabilities ensure the best experience for each device type.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Windows</h3>
+                  <p class="text-gray-400 text-sm">Full remote desktop with control via the Issyx agent.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 00-.83.22l-1.88 3.24a11.463 11.463 0 00-8.94 0L5.65 5.67a.643.643 0 00-.87-.2c-.28.18-.37.54-.22.83L6.4 9.48A10.78 10.78 0 001 18h22a10.78 10.78 0 00-5.4-8.52z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Android</h3>
+                  <p class="text-gray-400 text-sm">Screen sharing with remote control capabilities.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-gray-600/20 flex items-center justify-center text-gray-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">iOS / macOS</h3>
+                  <p class="text-gray-400 text-sm">Screen sharing in view-only mode for iOS. Screen sharing for macOS.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative animate-slide-right">
+            <div class="rounded-2xl bg-gradient-to-br from-green-600/20 to-emerald-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-white font-semibold">Active Session</h3>
+                  <span class="flex items-center gap-2 text-green-400 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    Connected
+                  </span>
+                </div>
+                <div class="aspect-video bg-dark-surface rounded-lg flex items-center justify-center mb-4">
+                  <div class="text-center">
+                    <svg class="w-16 h-16 text-gray-600 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span class="text-gray-500 text-sm">Remote screen view</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between text-sm">
+                  <div class="text-gray-400">Dell XPS 15 • Windows 11</div>
+                  <div class="text-gray-500">Session: 4m 32s</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Geofencing -->
+    <section class="py-24 px-6 bg-dark-surface/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1 animate-slide-left">
+            <div class="rounded-2xl bg-gradient-to-br from-green-600/20 to-emerald-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <h3 class="text-white font-semibold mb-4">Geofences</h3>
+                <div class="space-y-3">
+                  <div class="p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-white font-medium">HQ Office</span>
+                      <span class="px-2 py-1 rounded text-xs bg-green-500/20 text-green-400">Active</span>
+                    </div>
+                    <div class="text-gray-500 text-sm">500m radius • Alert on exit</div>
+                  </div>
+                  <div class="p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-white font-medium">Warehouse District</span>
+                      <span class="px-2 py-1 rounded text-xs bg-green-500/20 text-green-400">Active</span>
+                    </div>
+                    <div class="text-gray-500 text-sm">1km radius • Alert on enter/exit</div>
+                  </div>
+                  <div class="p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-white font-medium">Restricted Zone</span>
+                      <span class="px-2 py-1 rounded text-xs bg-amber-500/20 text-amber-400">Inactive</span>
+                    </div>
+                    <div class="text-gray-500 text-sm">200m radius • Alert on enter</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2 animate-slide-right">
+            <span class="text-green-400 text-sm font-semibold uppercase tracking-wider">Geofencing</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Location-based <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">boundaries and alerts</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Create circular geofences and get alerts when devices enter or leave zones. Each geofence has a center location and radius, with configurable alert triggers.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Circular Geofences</h3>
+                  <p class="text-gray-400 text-sm">Define boundaries by center coordinates and radius in meters.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Alert Triggers</h3>
+                  <p class="text-gray-400 text-sm">Configure alerts for when devices enter, exit, or both.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Location Tracking</h3>
+                  <p class="text-gray-400 text-sm">Track device locations with latitude, longitude, accuracy, and timestamp.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compliance Monitoring -->
+    <section class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-slide-left">
+            <span class="text-green-400 text-sm font-semibold uppercase tracking-wider">Compliance Monitoring</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Real-time <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">compliance status</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Monitor device compliance against your security policies. Detect issues with encryption, OS version, jailbreak status, and more. Each issue has a severity level and remediation guidance.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Encryption Verification</h3>
+                  <p class="text-gray-400 text-sm">Verify BitLocker, FileVault, or device encryption is enabled.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">OS Version Requirements</h3>
+                  <p class="text-gray-400 text-sm">Enforce minimum OS versions across your fleet.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Jailbreak Detection</h3>
+                  <p class="text-gray-400 text-sm">Detect rooted Android and jailbroken iOS devices.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Sync Enforcement</h3>
+                  <p class="text-gray-400 text-sm">Flag devices that haven't checked in within your defined period.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative animate-slide-right">
+            <div class="rounded-2xl bg-gradient-to-br from-green-600/20 to-emerald-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <h3 class="text-white font-semibold mb-4">Compliance Overview</h3>
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                  <div class="text-center p-3 bg-dark-surface rounded-lg">
+                    <div class="text-2xl font-bold text-green-400">142</div>
+                    <div class="text-gray-500 text-xs">Compliant</div>
+                  </div>
+                  <div class="text-center p-3 bg-dark-surface rounded-lg">
+                    <div class="text-2xl font-bold text-amber-400">8</div>
+                    <div class="text-gray-500 text-xs">Non-Compliant</div>
+                  </div>
+                  <div class="text-center p-3 bg-dark-surface rounded-lg">
+                    <div class="text-2xl font-bold text-gray-400">3</div>
+                    <div class="text-gray-500 text-xs">Unknown</div>
+                  </div>
+                </div>
+                <div class="space-y-3">
+                  <div class="p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-red-400"></span>
+                        <span class="text-white text-sm">Encryption Disabled</span>
+                      </div>
+                      <span class="text-red-400 text-sm">Critical</span>
+                    </div>
+                    <div class="text-gray-500 text-xs mt-1">3 devices affected</div>
+                  </div>
+                  <div class="p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                        <span class="text-white text-sm">OS Version Outdated</span>
+                      </div>
+                      <span class="text-amber-400 text-sm">Medium</span>
+                    </div>
+                    <div class="text-gray-500 text-xs mt-1">5 devices affected</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Management -->
+    <section class="py-24 px-6 bg-dark-surface/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1 animate-slide-left">
+            <div class="rounded-2xl bg-gradient-to-br from-green-600/20 to-emerald-600/20 p-8">
+              <div class="bg-dark-bg/80 backdrop-blur rounded-xl p-6">
+                <h3 class="text-white font-semibold mb-4">App Catalog</h3>
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-lg bg-blue-600/20 flex items-center justify-center text-blue-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-white text-sm font-medium">Slack</div>
+                        <div class="text-gray-500 text-xs">com.slack • Play Store</div>
+                      </div>
+                    </div>
+                    <span class="px-2 py-1 rounded text-xs bg-green-500/20 text-green-400">Required</span>
+                  </div>
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-lg bg-purple-600/20 flex items-center justify-center text-purple-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-white text-sm font-medium">Microsoft Teams</div>
+                        <div class="text-gray-500 text-xs">com.microsoft.teams • Play Store</div>
+                      </div>
+                    </div>
+                    <span class="px-2 py-1 rounded text-xs bg-green-500/20 text-green-400">Required</span>
+                  </div>
+                  <div class="flex items-center justify-between p-3 bg-dark-surface rounded-lg">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-lg bg-gray-600/20 flex items-center justify-center text-gray-400">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-white text-sm font-medium">Company Portal</div>
+                        <div class="text-gray-500 text-xs">https://portal.company.com • Web App</div>
+                      </div>
+                    </div>
+                    <span class="px-2 py-1 rounded text-xs bg-blue-500/20 text-blue-400">Available</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2 animate-slide-right">
+            <span class="text-green-400 text-sm font-semibold uppercase tracking-wider">App Management</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Deploy apps <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">silently to devices</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Manage your app catalog with support for Play Store, App Store, enterprise apps, and web apps. Associate apps with policies and control installation type per app.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Managed Google Play</h3>
+                  <p class="text-gray-400 text-sm">Browse and add apps directly from Google Play with web token integration.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Installation Types</h3>
+                  <p class="text-gray-400 text-sm">Mark apps as required, available for self-service, or blocked.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-600/20 flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Managed Configuration</h3>
+                  <p class="text-gray-400 text-sm">Pre-configure app settings with JSON-based managed configurations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to simplify device management?</h2>
+        <p class="text-xl text-gray-400 mb-8">See how Issyx MDM can secure your fleet across all platforms.</p>
+        <a href="/contact" class="btn-primary text-lg">Schedule a Demo</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

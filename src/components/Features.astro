@@ -1,0 +1,63 @@
+---
+import SolutionCard from './SolutionCard.astro';
+
+const solutions = [
+  {
+    title: 'Imaging & Deployment',
+    description: 'PXE boot imaging with custom profiles, driver injection, and software deployment at scale.',
+    icon: '<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>',
+    gradient: 'from-violet-500 to-purple-500',
+    href: '/solutions/imaging-deployment',
+  },
+  {
+    title: 'Mobile Device Management',
+    description: 'Windows Autopilot, Apple DEP, and Android Enterprise. Zero-touch enrollment.',
+    icon: '<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>',
+    gradient: 'from-green-500 to-emerald-500',
+    href: '/solutions/mdm',
+  },
+  {
+    title: 'Warehousing & Logistics',
+    description: 'Real-time inventory tracking, service orders, and global shipping integration.',
+    icon: '<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" /></svg>',
+    gradient: 'from-amber-500 to-orange-500',
+    href: '/solutions/warehousing',
+  },
+  {
+    title: 'Microsoft Licensing',
+    description: 'Microsoft 365 and Azure license management. Seat-based billing and provisioning.',
+    icon: '<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>',
+    gradient: 'from-blue-500 to-cyan-500',
+    href: '/solutions/microsoft-licensing',
+  },
+];
+---
+
+<section id="features" class="py-24 px-6 relative">
+  <!-- Section header -->
+  <div class="max-w-3xl mx-auto text-center mb-16">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+      Our
+      <span class="bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">
+        Solutions
+      </span>
+    </h2>
+    <p class="text-xl text-gray-400">
+      Comprehensive tools for every stage of the device lifecycle. Choose what you need, scale as you grow.
+    </p>
+  </div>
+
+  <!-- Solutions grid - 4 columns on desktop -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {solutions.map((solution, index) => (
+      <SolutionCard
+        title={solution.title}
+        description={solution.description}
+        icon={solution.icon}
+        gradient={solution.gradient}
+        href={solution.href}
+        delay={index * 100}
+      />
+    ))}
+  </div>
+</section>

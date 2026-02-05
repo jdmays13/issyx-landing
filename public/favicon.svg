@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#4f46e5"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="url(#grad)"/>
+  <!-- Issyx Logo scaled to fit 32x32 with padding -->
+  <g transform="translate(4, 5) scale(0.08)">
+    <!-- Left curve -->
+    <path d="M 90 70 C 90 110, 120 130, 145 150 C 120 170, 90 190, 90 230"
+          fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Right curve -->
+    <path d="M 210 70 C 210 110, 180 130, 155 150 C 180 170, 210 190, 210 230"
+          fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Vertical line -->
+    <path d="M 150 70 L 150 230"
+          fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import DetailedFeatures from '../components/DetailedFeatures.astro';
+import Integrations from '../components/Integrations.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Navbar />
+  <main>
+    <!-- Hero with animated background -->
+    <Hero />
+
+    <!-- Quick feature overview (8 cards) -->
+    <Features />
+
+    <!-- How it works steps -->
+    <HowItWorks />
+
+    <!-- Detailed feature showcases -->
+    <DetailedFeatures />
+
+    <!-- Integration partners -->
+    <Integrations />
+
+    <!-- FAQ section -->
+    <FAQ />
+
+    <!-- Final CTA -->
+    <CTA />
+  </main>
+  <Footer />
+</Layout>

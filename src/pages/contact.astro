@@ -1,0 +1,234 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contact Us - Issyx Unified" description="Get in touch with the Issyx team. Request a demo, ask questions, or learn how we can help transform your IT operations.">
+  <Navbar />
+  <main class="pt-32 pb-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <!-- Left: Content -->
+        <div>
+          <span class="text-primary-400 text-sm font-semibold uppercase tracking-wider">Contact Us</span>
+          <h1 class="text-4xl md:text-5xl font-bold mt-4 mb-6">
+            Let's talk about your <span class="gradient-text">IT operations</span>
+          </h1>
+          <p class="text-xl text-gray-400 mb-8">
+            Whether you're managing 50 devices or 50,000, we'd love to show you how Issyx can streamline your operations. Fill out the form and we'll be in touch within 24 hours.
+          </p>
+
+          <!-- Contact info -->
+          <div class="space-y-6 mb-12">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-primary-600/20 flex items-center justify-center text-primary-400 flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-white mb-1">Email</h3>
+                <a href="mailto:sales@issyx.com" class="text-gray-400 hover:text-primary-400 transition-colors">sales@issyx.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-primary-600/20 flex items-center justify-center text-primary-400 flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-white mb-1">Response Time</h3>
+                <p class="text-gray-400">We typically respond within 24 hours</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-primary-600/20 flex items-center justify-center text-primary-400 flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-white mb-1">365 Support</h3>
+                <p class="text-gray-400">Available every day of the year</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- What to expect -->
+          <div class="bg-dark-surface border border-dark-border rounded-2xl p-6">
+            <h3 class="font-semibold text-white mb-4">What to expect</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-400">A personalized demo of the platform</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-400">Discussion of your specific use cases</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-400">Custom pricing based on your needs</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-400">No pressure, no obligations</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div>
+          <div class="bg-dark-surface border border-dark-border rounded-2xl p-8">
+            <h2 class="text-2xl font-bold text-white mb-6">Request a demo</h2>
+
+            <form id="contact-form" class="space-y-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">First name *</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    required
+                    class="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                    placeholder="John"
+                  />
+                </div>
+                <div>
+                  <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">Last name *</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    required
+                    class="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                    placeholder="Doe"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Work email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                  placeholder="john@company.com"
+                />
+              </div>
+
+              <div>
+                <label for="company" class="block text-sm font-medium text-gray-300 mb-2">Company *</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  required
+                  class="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                  placeholder="Acme Inc."
+                />
+              </div>
+
+              <div>
+                <label for="deviceCount" class="block text-sm font-medium text-gray-300 mb-2">How many devices do you manage?</label>
+                <select
+                  id="deviceCount"
+                  name="deviceCount"
+                  class="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                >
+                  <option value="">Select a range</option>
+                  <option value="1-50">1 - 50</option>
+                  <option value="51-200">51 - 200</option>
+                  <option value="201-500">201 - 500</option>
+                  <option value="501-1000">501 - 1,000</option>
+                  <option value="1001-5000">1,001 - 5,000</option>
+                  <option value="5000+">5,000+</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="interest" class="block text-sm font-medium text-gray-300 mb-2">What are you most interested in?</label>
+                <select
+                  id="interest"
+                  name="interest"
+                  class="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                >
+                  <option value="">Select an option</option>
+                  <option value="imaging">Imaging & Deployment</option>
+                  <option value="mdm">Mobile Device Management</option>
+                  <option value="warehouse">Warehousing & Logistics</option>
+                  <option value="licensing">Microsoft Licensing</option>
+                  <option value="all">Full Platform</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Tell us about your needs</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
+                  placeholder="What challenges are you facing with device management?"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full btn-primary text-lg py-4"
+              >
+                Request Demo
+              </button>
+
+              <p class="text-sm text-gray-500 text-center">
+                By submitting this form, you agree to our <a href="/privacy" class="text-primary-400 hover:text-primary-300">Privacy Policy</a>.
+              </p>
+            </form>
+
+            <!-- Success message (hidden by default) -->
+            <div id="success-message" class="hidden text-center py-12">
+              <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-green-500/20 flex items-center justify-center">
+                <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Thank you!</h3>
+              <p class="text-gray-400">We've received your request and will be in touch within 24 hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const successMessage = document.getElementById('success-message');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // In a real implementation, you would send the form data to your backend
+    // For now, we'll just show the success message
+    form.classList.add('hidden');
+    successMessage?.classList.remove('hidden');
+  });
+</script>

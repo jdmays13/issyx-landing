@@ -1,0 +1,95 @@
+---
+const faqs = [
+  {
+    question: "How quickly can we get started?",
+    answer: "Most teams are up and running within a week. Our onboarding specialists will help you connect your systems, configure workflows, and start managing devices. For simple deployments, you can be live in as little as 24 hours."
+  },
+  {
+    question: "What devices and platforms do you support?",
+    answer: "We support Windows, macOS, iOS, Android, and Linux devices. This includes laptops, desktops, tablets, and mobile phones from all major manufacturers including Apple, Dell, HP, Lenovo, Microsoft Surface, and more."
+  },
+  {
+    question: "What regions do you support?",
+    answer: "We currently support device operations across the United States. International expansion is on our roadmap—contact us if you have specific regional requirements."
+  },
+  {
+    question: "How does zero-touch enrollment work?",
+    answer: "With zero-touch enrollment (Windows Autopilot, Apple DEP, Android Enterprise), devices ship directly to employees pre-configured. When they power on and connect to the internet, the device automatically enrolls in your MDM and applies your security policies—no IT involvement required."
+  },
+  {
+    question: "What happens when an employee leaves?",
+    answer: "Our automated offboarding workflow handles everything: triggering a remote wipe, generating a prepaid shipping label, tracking the return, processing the device through imaging, and adding it back to your available inventory—all without manual intervention."
+  },
+  {
+    question: "Is there a minimum number of devices required?",
+    answer: "No minimums. Whether you're managing 10 devices or 10,000, Issyx scales with you. Our pricing is per-device, so you only pay for what you use. Many of our customers start small and grow with us."
+  },
+];
+---
+
+<section id="faq" class="py-24 px-6">
+  <div class="max-w-4xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="text-primary-400 text-sm font-semibold uppercase tracking-wider">FAQ</span>
+      <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">
+        Frequently asked <span class="gradient-text">questions</span>
+      </h2>
+      <p class="text-xl text-gray-400">
+        Everything you need to know about Issyx. Can't find an answer? <a href="mailto:support@issyx.com" class="text-primary-400 hover:text-primary-300">Contact us</a>.
+      </p>
+    </div>
+
+    <!-- FAQ items -->
+    <div class="space-y-4">
+      {faqs.map((faq, index) => (
+        <div class="faq-item border border-dark-border rounded-xl overflow-hidden">
+          <button
+            class="faq-trigger w-full px-6 py-5 flex items-center justify-between text-left hover:bg-dark-surface/50 transition-colors"
+            aria-expanded="false"
+            data-index={index}
+          >
+            <span class="font-semibold text-white pr-8">{faq.question}</span>
+            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-5">
+            <p class="text-gray-400 leading-relaxed">{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const item = trigger.closest('.faq-item');
+      const content = item?.querySelector('.faq-content');
+      const icon = trigger.querySelector('.faq-icon');
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+      // Close all other items
+      document.querySelectorAll('.faq-item').forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.querySelector('.faq-content')?.classList.add('hidden');
+          otherItem.querySelector('.faq-trigger')?.setAttribute('aria-expanded', 'false');
+          otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+        }
+      });
+
+      // Toggle current item
+      content?.classList.toggle('hidden');
+      trigger.setAttribute('aria-expanded', String(!isExpanded));
+      icon?.classList.toggle('rotate-180');
+    });
+  });
+</script>
+
+<style>
+  .faq-icon {
+    transition: transform 0.2s ease-out;
+  }
+</style>

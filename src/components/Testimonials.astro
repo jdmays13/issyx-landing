@@ -1,0 +1,70 @@
+---
+const testimonials = [
+  {
+    quote: "Issyx transformed our IT operations. What used to take our team days now happens automatically. Onboarding a new employee with a fully configured device takes minutes, not weeks.",
+    author: "Sarah Chen",
+    role: "VP of IT",
+    company: "TechFlow Inc.",
+    avatar: "SC",
+  },
+  {
+    quote: "The visibility we get into our device fleet is incredible. We went from spreadsheets and guesswork to real-time dashboards showing exactly where every device is and its status.",
+    author: "Marcus Johnson",
+    role: "IT Director",
+    company: "Velocity Systems",
+    avatar: "MJ",
+  },
+  {
+    quote: "We scaled from 200 to 2,000 employees in 18 months. Without Issyx handling our device logistics, there's no way we could have grown that fast without tripling the IT team.",
+    author: "Emily Rodriguez",
+    role: "CTO",
+    company: "Quantum Labs",
+    avatar: "ER",
+  },
+];
+---
+
+<section class="py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="text-primary-400 text-sm font-semibold uppercase tracking-wider">Testimonials</span>
+      <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">
+        Loved by <span class="gradient-text">IT teams everywhere</span>
+      </h2>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+        See what IT leaders say about transforming their device management with Issyx.
+      </p>
+    </div>
+
+    <!-- Testimonials grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {testimonials.map((testimonial) => (
+        <div class="bg-dark-surface border border-dark-border rounded-2xl p-8 hover:border-primary-500/30 transition-colors">
+          <!-- Quote icon -->
+          <div class="mb-6">
+            <svg class="w-10 h-10 text-primary-600/50" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+            </svg>
+          </div>
+
+          <!-- Quote -->
+          <p class="text-gray-300 leading-relaxed mb-8">
+            "{testimonial.quote}"
+          </p>
+
+          <!-- Author -->
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary-600 to-purple-600 flex items-center justify-center text-white font-semibold">
+              {testimonial.avatar}
+            </div>
+            <div>
+              <div class="font-semibold text-white">{testimonial.author}</div>
+              <div class="text-sm text-gray-500">{testimonial.role}, {testimonial.company}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,61 @@
+---
+const portalUrl = import.meta.env.PUBLIC_PORTAL_URL || 'https://app.issyx.com';
+const salesEmail = import.meta.env.PUBLIC_SALES_EMAIL || 'sales@issyx.com';
+
+const benefits = [
+  'Free 14-day trial',
+  'No credit card required',
+  'Unlimited devices',
+  'Full feature access',
+];
+---
+
+<section id="contact" class="py-24 px-6 relative overflow-hidden">
+  <!-- Background gradient -->
+  <div class="absolute inset-0 gradient-dark-cta"></div>
+
+  <!-- Animated orbs -->
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/30 rounded-full blur-3xl animate-pulse-slow"></div>
+  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse-slow delay-1000" style="animation-delay: 2s"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+      Ready to unify your device management?
+    </h2>
+    <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+      Join hundreds of IT teams who have simplified their operations with Issyx Unified.
+    </p>
+
+    <!-- Benefits -->
+    <div class="flex flex-wrap justify-center gap-4 mb-10">
+      {benefits.map((benefit) => (
+        <div class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm">
+          <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-sm font-medium">{benefit}</span>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href="/contact"
+        class="group btn-white text-lg flex items-center gap-2"
+      >
+        Start Free Trial
+        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+      <a
+        href="/contact"
+        class="btn-secondary text-lg border-white/20 hover:border-white/40"
+      >
+        Contact Sales
+      </a>
+    </div>
+  </div>
+</section>

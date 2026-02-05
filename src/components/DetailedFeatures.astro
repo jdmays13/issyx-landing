@@ -1,0 +1,465 @@
+---
+import FeatureShowcase from './FeatureShowcase.astro';
+
+// Screenshot recommendations when ready to replace mockups:
+// 1. Device Lifecycle: Devices page showing a filtered list with various statuses (deployed, imaging, offboarding)
+// 2. Zero-Touch Deployment: MDM enrollment profiles page or a device showing Autopilot enrollment progress
+// 3. Mass Imaging: Imaging Jobs page showing active multicast session with progress bars
+// 4. Warehouse Operations: Warehouse dashboard with stats cards, incoming shipments, and job queue
+
+const features = [
+  {
+    tag: 'Device Lifecycle',
+    title: 'Complete device lifecycle management',
+    subtitle: 'From procurement to retirement, automated.',
+    description: 'Track every device from the moment it enters your fleet until it\'s securely wiped and recycled. Our unified platform replaces spreadsheets, manual processes, and fragmented tools with a single source of truth.',
+    features: [
+      'Real-time device tracking across your entire fleet',
+      'Automated status transitions and workflow triggers',
+      'Complete audit trail of every device action',
+      'Integration with asset management and CMDB systems',
+      'Automated compliance reporting and alerts',
+    ],
+    gradient: 'from-blue-600 to-cyan-600',
+    imagePosition: 'right' as const,
+  },
+  {
+    tag: 'Zero-Touch Deployment',
+    title: 'Ship devices that configure themselves',
+    subtitle: 'Employees unbox and start working. That\'s it.',
+    description: 'With Windows Autopilot, Apple DEP, and Android Enterprise, devices ship directly to employees fully enrolled in your MDM. Security policies apply automatically. No IT touch required.',
+    features: [
+      'Windows Autopilot for seamless PC provisioning',
+      'Apple DEP integration for Mac, iPad, and iPhone',
+      'Android Enterprise for managed Android devices',
+      'Pre-configured apps, settings, and security policies',
+      'Automatic MDM enrollment on first boot',
+    ],
+    gradient: 'from-violet-600 to-purple-600',
+    imagePosition: 'left' as const,
+  },
+  {
+    tag: 'Mass Imaging',
+    title: 'Image hundreds of devices at once',
+    subtitle: 'PXE boot, multicast, zero manual effort.',
+    description: 'Our imaging system handles mass deployments with ease. Boot devices over the network, stream images via multicast, and deploy custom profiles with drivers, software, and configurations baked in.',
+    features: [
+      'PXE boot detection and automatic imaging',
+      'Multicast deployment for simultaneous imaging',
+      'Custom imaging profiles with software bundles',
+      'Driver injection and hardware compatibility',
+      'Post-imaging scripts and domain join automation',
+    ],
+    gradient: 'from-amber-600 to-orange-600',
+    imagePosition: 'right' as const,
+  },
+  {
+    tag: 'Warehouse Operations',
+    title: 'Full visibility into your device warehouse',
+    subtitle: 'Real-time dashboards. Zero surprises.',
+    description: 'See exactly what\'s happening in your warehouse at any moment. Track incoming shipments, monitor processing queues, identify at-risk jobs, and ensure nothing falls through the cracks.',
+    features: [
+      'Real-time warehouse monitoring dashboard',
+      'Incoming shipment tracking and receiving',
+      'Service order management and prioritization',
+      'At-risk job detection and automated alerts',
+      'TV mode for warehouse floor displays',
+    ],
+    gradient: 'from-emerald-600 to-teal-600',
+    imagePosition: 'left' as const,
+  },
+];
+---
+
+<section class="py-24 px-6">
+  <div class="max-w-7xl mx-auto space-y-32">
+    <!-- Device Lifecycle Mockup -->
+    <FeatureShowcase
+      tag={features[0].tag}
+      title={features[0].title}
+      subtitle={features[0].subtitle}
+      description={features[0].description}
+      features={features[0].features}
+      gradient={features[0].gradient}
+      imagePosition={features[0].imagePosition}
+    >
+      <div slot="mockup" class="mockup-window">
+        <!-- Window header -->
+        <div class="flex items-center gap-2 px-4 py-3 bg-dark-bg border-b border-dark-border">
+          <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+          <span class="ml-4 text-sm text-gray-500">Devices</span>
+        </div>
+        <!-- Content -->
+        <div class="p-4 bg-dark-bg/80">
+          <!-- Header row -->
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex gap-2">
+              <div class="px-3 py-1.5 bg-dark-surface rounded-lg text-xs text-gray-400 border border-dark-border">All Devices</div>
+              <div class="px-3 py-1.5 bg-primary-600/20 rounded-lg text-xs text-primary-400 border border-primary-600/30">247 devices</div>
+            </div>
+            <div class="px-3 py-1.5 bg-dark-surface rounded-lg text-xs text-gray-500 border border-dark-border flex items-center gap-2">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+              Search...
+            </div>
+          </div>
+          <!-- Table -->
+          <div class="rounded-lg border border-dark-border overflow-hidden">
+            <table class="w-full text-xs">
+              <thead class="bg-dark-surface/50">
+                <tr class="text-gray-500 text-left">
+                  <th class="px-3 py-2 font-medium">Device</th>
+                  <th class="px-3 py-2 font-medium">Serial</th>
+                  <th class="px-3 py-2 font-medium">Status</th>
+                  <th class="px-3 py-2 font-medium">Assigned</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-dark-border">
+                <tr class="text-gray-300">
+                  <td class="px-3 py-2.5">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 rounded bg-blue-600/20 flex items-center justify-center">
+                        <svg class="w-3 h-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                      </div>
+                      Dell Latitude 5540
+                    </div>
+                  </td>
+                  <td class="px-3 py-2.5 text-gray-500 font-mono">7GH2K93</td>
+                  <td class="px-3 py-2.5"><span class="px-2 py-0.5 rounded-full bg-green-600/20 text-green-400 text-[10px]">Deployed</span></td>
+                  <td class="px-3 py-2.5 text-gray-400">Sarah Chen</td>
+                </tr>
+                <tr class="text-gray-300">
+                  <td class="px-3 py-2.5">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 rounded bg-gray-600/20 flex items-center justify-center">
+                        <svg class="w-3 h-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                      </div>
+                      MacBook Pro 14"
+                    </div>
+                  </td>
+                  <td class="px-3 py-2.5 text-gray-500 font-mono">C02X93KL</td>
+                  <td class="px-3 py-2.5"><span class="px-2 py-0.5 rounded-full bg-amber-600/20 text-amber-400 text-[10px]">Imaging</span></td>
+                  <td class="px-3 py-2.5 text-gray-500">—</td>
+                </tr>
+                <tr class="text-gray-300">
+                  <td class="px-3 py-2.5">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 rounded bg-blue-600/20 flex items-center justify-center">
+                        <svg class="w-3 h-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                      </div>
+                      ThinkPad X1 Carbon
+                    </div>
+                  </td>
+                  <td class="px-3 py-2.5 text-gray-500 font-mono">PF3DJKM2</td>
+                  <td class="px-3 py-2.5"><span class="px-2 py-0.5 rounded-full bg-purple-600/20 text-purple-400 text-[10px]">Offboarding</span></td>
+                  <td class="px-3 py-2.5 text-gray-400">James Wilson</td>
+                </tr>
+                <tr class="text-gray-300">
+                  <td class="px-3 py-2.5">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 rounded bg-green-600/20 flex items-center justify-center">
+                        <svg class="w-3 h-3 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                      </div>
+                      HP EliteBook 840
+                    </div>
+                  </td>
+                  <td class="px-3 py-2.5 text-gray-500 font-mono">5CD2456N</td>
+                  <td class="px-3 py-2.5"><span class="px-2 py-0.5 rounded-full bg-cyan-600/20 text-cyan-400 text-[10px]">Ready</span></td>
+                  <td class="px-3 py-2.5 text-gray-500">—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </FeatureShowcase>
+
+    <!-- Zero-Touch Deployment Mockup -->
+    <FeatureShowcase
+      tag={features[1].tag}
+      title={features[1].title}
+      subtitle={features[1].subtitle}
+      description={features[1].description}
+      features={features[1].features}
+      gradient={features[1].gradient}
+      imagePosition={features[1].imagePosition}
+    >
+      <div slot="mockup" class="mockup-window">
+        <!-- Window header -->
+        <div class="flex items-center gap-2 px-4 py-3 bg-dark-bg border-b border-dark-border">
+          <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+          <span class="ml-4 text-sm text-gray-500">Enrollment Profiles</span>
+        </div>
+        <!-- Content -->
+        <div class="p-4 bg-dark-bg/80">
+          <!-- Profile cards -->
+          <div class="space-y-3">
+            <!-- Windows Autopilot Profile -->
+            <div class="p-4 rounded-lg border border-dark-border bg-dark-surface/50">
+              <div class="flex items-start justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-blue-600/20 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                  </div>
+                  <div>
+                    <div class="font-medium text-sm text-white">Windows Autopilot - Standard</div>
+                    <div class="text-xs text-gray-500">Self-deploying mode • Domain join enabled</div>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 rounded-full bg-green-600/20 text-green-400 text-[10px]">Active</span>
+              </div>
+              <div class="mt-3 flex items-center gap-4 text-xs text-gray-400">
+                <span>156 devices enrolled</span>
+                <span class="text-gray-600">•</span>
+                <span>Last sync 2 min ago</span>
+              </div>
+            </div>
+
+            <!-- Apple DEP Profile -->
+            <div class="p-4 rounded-lg border border-dark-border bg-dark-surface/50">
+              <div class="flex items-start justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-gray-600/20 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                  </div>
+                  <div>
+                    <div class="font-medium text-sm text-white">Apple DEP - Corporate</div>
+                    <div class="text-xs text-gray-500">Supervised • Skip Setup Assistant</div>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 rounded-full bg-green-600/20 text-green-400 text-[10px]">Active</span>
+              </div>
+              <div class="mt-3 flex items-center gap-4 text-xs text-gray-400">
+                <span>43 devices enrolled</span>
+                <span class="text-gray-600">•</span>
+                <span>Last sync 15 min ago</span>
+              </div>
+            </div>
+
+            <!-- Android Enterprise Profile -->
+            <div class="p-4 rounded-lg border border-dark-border bg-dark-surface/50">
+              <div class="flex items-start justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-green-600/20 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-green-400" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48C13.85 1.23 12.95 1 12 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31C6.97 3.26 6 5.01 6 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/></svg>
+                  </div>
+                  <div>
+                    <div class="font-medium text-sm text-white">Android Enterprise - Work Profile</div>
+                    <div class="text-xs text-gray-500">Managed Google Play • BYOD</div>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 rounded-full bg-green-600/20 text-green-400 text-[10px]">Active</span>
+              </div>
+              <div class="mt-3 flex items-center gap-4 text-xs text-gray-400">
+                <span>28 devices enrolled</span>
+                <span class="text-gray-600">•</span>
+                <span>Last sync 8 min ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </FeatureShowcase>
+
+    <!-- Mass Imaging Mockup -->
+    <FeatureShowcase
+      tag={features[2].tag}
+      title={features[2].title}
+      subtitle={features[2].subtitle}
+      description={features[2].description}
+      features={features[2].features}
+      gradient={features[2].gradient}
+      imagePosition={features[2].imagePosition}
+    >
+      <div slot="mockup" class="mockup-window">
+        <!-- Window header -->
+        <div class="flex items-center gap-2 px-4 py-3 bg-dark-bg border-b border-dark-border">
+          <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+          <span class="ml-4 text-sm text-gray-500">Imaging Jobs</span>
+        </div>
+        <!-- Content -->
+        <div class="p-4 bg-dark-bg/80">
+          <!-- Active Session Banner -->
+          <div class="mb-4 p-3 rounded-lg bg-amber-600/10 border border-amber-600/30">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
+                <span class="text-sm font-medium text-amber-400">Multicast Session Active</span>
+              </div>
+              <span class="text-xs text-amber-400/70">24 devices • Win11 Enterprise</span>
+            </div>
+            <div class="mt-2">
+              <div class="flex justify-between text-xs text-gray-400 mb-1">
+                <span>Overall Progress</span>
+                <span>67%</span>
+              </div>
+              <div class="h-1.5 bg-dark-border rounded-full overflow-hidden">
+                <div class="h-full bg-amber-500 rounded-full" style="width: 67%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Job list -->
+          <div class="space-y-2">
+            <div class="p-3 rounded-lg border border-dark-border bg-dark-surface/50">
+              <div class="flex items-center justify-between mb-2">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 rounded bg-amber-600/20 flex items-center justify-center">
+                    <svg class="w-3 h-3 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 3.58 4 8 4s8-2 8-4V7M4 7c0 2 3.58 4 8 4s8-2 8-4M4 7c0-2 3.58-4 8-4s8 2 8 4"/></svg>
+                  </div>
+                  <span class="text-sm text-white font-mono">7GH2K93</span>
+                  <span class="text-xs text-gray-500">Dell Latitude 5540</span>
+                </div>
+                <span class="px-2 py-0.5 rounded-full bg-amber-600/20 text-amber-400 text-[10px]">Applying Image</span>
+              </div>
+              <div class="h-1 bg-dark-border rounded-full overflow-hidden">
+                <div class="h-full bg-amber-500 rounded-full" style="width: 78%"></div>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-lg border border-dark-border bg-dark-surface/50">
+              <div class="flex items-center justify-between mb-2">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 rounded bg-blue-600/20 flex items-center justify-center">
+                    <svg class="w-3 h-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 3.58 4 8 4s8-2 8-4V7M4 7c0 2 3.58 4 8 4s8-2 8-4M4 7c0-2 3.58-4 8-4s8 2 8 4"/></svg>
+                  </div>
+                  <span class="text-sm text-white font-mono">PF3DJKM2</span>
+                  <span class="text-xs text-gray-500">ThinkPad X1 Carbon</span>
+                </div>
+                <span class="px-2 py-0.5 rounded-full bg-blue-600/20 text-blue-400 text-[10px]">Installing Drivers</span>
+              </div>
+              <div class="h-1 bg-dark-border rounded-full overflow-hidden">
+                <div class="h-full bg-blue-500 rounded-full" style="width: 45%"></div>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-lg border border-dark-border bg-dark-surface/50">
+              <div class="flex items-center justify-between mb-2">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 rounded bg-green-600/20 flex items-center justify-center">
+                    <svg class="w-3 h-3 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span class="text-sm text-white font-mono">5CD2456N</span>
+                  <span class="text-xs text-gray-500">HP EliteBook 840</span>
+                </div>
+                <span class="px-2 py-0.5 rounded-full bg-green-600/20 text-green-400 text-[10px]">Complete</span>
+              </div>
+              <div class="h-1 bg-dark-border rounded-full overflow-hidden">
+                <div class="h-full bg-green-500 rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </FeatureShowcase>
+
+    <!-- Warehouse Operations Mockup -->
+    <FeatureShowcase
+      tag={features[3].tag}
+      title={features[3].title}
+      subtitle={features[3].subtitle}
+      description={features[3].description}
+      features={features[3].features}
+      gradient={features[3].gradient}
+      imagePosition={features[3].imagePosition}
+    >
+      <div slot="mockup" class="mockup-window">
+        <!-- Window header -->
+        <div class="flex items-center gap-2 px-4 py-3 bg-dark-bg border-b border-dark-border">
+          <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+          <span class="ml-4 text-sm text-gray-500">Warehouse Dashboard</span>
+        </div>
+        <!-- Content -->
+        <div class="p-4 bg-dark-bg/80">
+          <!-- Stats row -->
+          <div class="grid grid-cols-4 gap-3 mb-4">
+            <div class="p-3 rounded-lg bg-dark-surface/50 border border-dark-border">
+              <div class="text-lg font-bold text-white">47</div>
+              <div class="text-[10px] text-gray-500">In Queue</div>
+            </div>
+            <div class="p-3 rounded-lg bg-dark-surface/50 border border-dark-border">
+              <div class="text-lg font-bold text-green-400">124</div>
+              <div class="text-[10px] text-gray-500">Ready to Ship</div>
+            </div>
+            <div class="p-3 rounded-lg bg-dark-surface/50 border border-dark-border">
+              <div class="text-lg font-bold text-amber-400">3</div>
+              <div class="text-[10px] text-gray-500">At Risk</div>
+            </div>
+            <div class="p-3 rounded-lg bg-dark-surface/50 border border-dark-border">
+              <div class="text-lg font-bold text-white">12</div>
+              <div class="text-[10px] text-gray-500">Incoming</div>
+            </div>
+          </div>
+
+          <!-- Incoming shipments -->
+          <div class="mb-3">
+            <div class="text-xs text-gray-400 mb-2 font-medium">Incoming Shipments</div>
+            <div class="space-y-2">
+              <div class="flex items-center justify-between p-2 rounded bg-dark-surface/30 border border-dark-border">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 rounded bg-blue-600/20 flex items-center justify-center">
+                    <svg class="w-3 h-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                  </div>
+                  <div>
+                    <div class="text-xs text-white">Acme Corp</div>
+                    <div class="text-[10px] text-gray-500">50 devices • FedEx</div>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div class="text-xs text-green-400">Today</div>
+                  <div class="text-[10px] text-gray-500">1Z999AA1</div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded bg-dark-surface/30 border border-dark-border">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 rounded bg-purple-600/20 flex items-center justify-center">
+                    <svg class="w-3 h-3 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                  </div>
+                  <div>
+                    <div class="text-xs text-white">TechStart Inc</div>
+                    <div class="text-[10px] text-gray-500">25 devices • UPS</div>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div class="text-xs text-amber-400">Tomorrow</div>
+                  <div class="text-[10px] text-gray-500">1Z888BB2</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- At-risk alert -->
+          <div class="p-2 rounded bg-red-600/10 border border-red-600/30">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+              <div>
+                <div class="text-xs text-red-400 font-medium">3 jobs at risk of SLA breach</div>
+                <div class="text-[10px] text-red-400/70">GlobalTech order due in 4 hours</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </FeatureShowcase>
+  </div>
+</section>
+
+<style>
+  .mockup-window {
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+</style>

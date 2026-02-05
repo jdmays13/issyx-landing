@@ -1,0 +1,79 @@
+---
+const steps = [
+  {
+    number: '01',
+    title: 'Connect Your Systems',
+    description: 'Integrate with your existing HR, identity, and procurement systems in minutes. We support all major platforms out of the box.',
+    icon: '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>',
+  },
+  {
+    number: '02',
+    title: 'Configure Your Workflows',
+    description: 'Set up automated workflows for onboarding, offboarding, and device refreshes. Define imaging profiles and deployment rules.',
+    icon: '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>',
+  },
+  {
+    number: '03',
+    title: 'Deploy at Scale',
+    description: 'Ship devices globally with zero-touch enrollment. Employees receive fully configured devices ready to use on day one.',
+    icon: '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>',
+  },
+  {
+    number: '04',
+    title: 'Manage & Monitor',
+    description: 'Track every device in real-time. Handle support, repairs, and refreshes from a single dashboard with complete visibility.',
+    icon: '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>',
+  },
+];
+---
+
+<section class="py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <span class="text-primary-400 text-sm font-semibold uppercase tracking-wider">How It Works</span>
+      <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">
+        Get started in <span class="gradient-text">four simple steps</span>
+      </h2>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+        From integration to deployment, we've streamlined every step of the device lifecycle.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="relative">
+      <!-- Connection line (desktop only) -->
+      <div class="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-dark-border to-transparent"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {steps.map((step, index) => (
+          <div class="relative">
+            <!-- Step card -->
+            <div class="bg-dark-surface border border-dark-border rounded-2xl p-6 hover:border-primary-500/50 transition-colors h-full">
+              <!-- Number badge -->
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-5xl font-bold text-dark-border">{step.number}</span>
+                <div class="w-14 h-14 rounded-xl bg-primary-600/20 flex items-center justify-center text-primary-400">
+                  <Fragment set:html={step.icon} />
+                </div>
+              </div>
+
+              <!-- Content -->
+              <h3 class="text-xl font-semibold text-white mb-3">{step.title}</h3>
+              <p class="text-gray-400 leading-relaxed">{step.description}</p>
+            </div>
+
+            <!-- Arrow (mobile/tablet) -->
+            {index < steps.length - 1 && (
+              <div class="lg:hidden flex justify-center my-4">
+                <svg class="w-6 h-6 text-dark-border" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,62 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  gradient: string;
+  delay?: number;
+}
+
+const { title, description, icon, gradient, delay = 0 } = Astro.props;
+---
+
+<div
+  class="feature-card group relative p-6 rounded-2xl bg-dark-surface border border-dark-border hover:border-primary-500/50 transition-all duration-500 card-glow"
+  style={`animation-delay: ${delay}ms`}
+>
+  <!-- Icon with gradient -->
+  <div class={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-gradient-to-br ${gradient}`}>
+    <Fragment set:html={icon} />
+  </div>
+
+  <!-- Title -->
+  <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-primary-400 transition-colors">
+    {title}
+  </h3>
+
+  <!-- Description -->
+  <p class="text-gray-400 text-sm leading-relaxed">
+    {description}
+  </p>
+
+  <!-- Hover border glow -->
+  <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+    <div class="absolute inset-[-1px] rounded-2xl bg-gradient-to-r from-primary-500/20 to-purple-500/20"></div>
+  </div>
+</div>
+
+<script>
+  // Mouse tracking for glow effect
+  document.querySelectorAll('.feature-card').forEach(card => {
+    (card as HTMLElement).addEventListener('mousemove', (e) => {
+      const mouseEvent = e as MouseEvent;
+      const target = mouseEvent.target as HTMLElement;
+      const featureCard = target.closest('.feature-card') as HTMLElement | null;
+      const rect = featureCard?.getBoundingClientRect();
+      if (rect && featureCard) {
+        const x = mouseEvent.clientX - rect.left;
+        const y = mouseEvent.clientY - rect.top;
+        featureCard.style.setProperty('--mouse-x', `${x}px`);
+        featureCard.style.setProperty('--mouse-y', `${y}px`);
+      }
+    });
+  });
+</script>
+
+<style>
+  .feature-card {
+    @apply animate-fade-in-up;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+</style>

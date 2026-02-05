@@ -1,0 +1,734 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const engravingFeatures = [
+  'Custom text engraving on device chassis',
+  'Asset tag and barcode engraving',
+  'Company logo laser etching',
+  'QR codes for quick device lookup',
+  'Employee name personalization',
+  'Tamper-evident serial numbers',
+];
+---
+
+<Layout title="Imaging & Deployment - Issyx Unified" description="Enterprise device imaging with PXE boot, HTTP Fan-Out distribution, Image Factory, custom profiles, and professional asset engraving.">
+  <Navbar />
+  <main>
+    <!-- Hero -->
+    <section class="pt-32 pb-24 px-6 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-violet-900/20 to-transparent"></div>
+      <div class="max-w-7xl mx-auto relative">
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 mb-6">
+            <span class="w-2 h-2 rounded-full bg-violet-500"></span>
+            <span class="text-sm text-violet-400">Imaging & Deployment</span>
+          </span>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            Deploy hundreds of devices <span class="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">without touching one</span>
+          </h1>
+          <p class="text-xl text-gray-400 mb-8">
+            Enterprise-grade imaging infrastructure with PXE boot provisioning, HTTP Fan-Out distribution, automated gold image building, and complete profile management.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="btn-primary text-lg">Request a Demo</a>
+            <a href="#pxe-boot" class="btn-secondary text-lg">Explore Features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 1: PXE Boot Imaging -->
+    <section id="pxe-boot" class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-slide-left">
+            <span class="text-violet-400 text-sm font-semibold uppercase tracking-wider">Network Boot</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              PXE Boot <span class="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">Imaging</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-6">
+              Devices automatically detect your imaging infrastructure when they boot. No USB drives, no manual OS installation, no technician intervention. Just plug in, power on, and watch devices configure themselves.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-violet-600/20 flex items-center justify-center text-violet-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Automatic Discovery</h3>
+                  <p class="text-gray-400 text-sm">Devices find your imaging node via DHCP options—no manual configuration needed on each device.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-violet-600/20 flex items-center justify-center text-violet-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">WinPE Environment</h3>
+                  <p class="text-gray-400 text-sm">Custom WinPE boots with our imaging GUI—progress tracking, device info, and automatic job assignment.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-violet-600/20 flex items-center justify-center text-violet-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Real-time Progress</h3>
+                  <p class="text-gray-400 text-sm">Watch imaging progress from the portal—see each step complete across all devices simultaneously.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative animate-slide-right">
+            <div class="rounded-2xl bg-dark-surface border border-dark-border p-6">
+              <div class="bg-dark-bg rounded-xl p-4 mb-4">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-3 h-3 rounded-full bg-violet-500"></div>
+                  <span class="text-sm text-gray-400">Imaging Job Active</span>
+                </div>
+                <div class="space-y-3">
+                  <div>
+                    <div class="flex justify-between text-sm mb-1">
+                      <span class="text-gray-400">Applying OS Image</span>
+                      <span class="text-violet-400">67%</span>
+                    </div>
+                    <div class="h-2 bg-dark-surface rounded-full overflow-hidden">
+                      <div class="h-full bg-gradient-to-r from-violet-500 to-purple-500 rounded-full" style="width: 67%"></div>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-4 text-sm pt-2">
+                    <div>
+                      <div class="text-gray-500">Device</div>
+                      <div class="text-white font-mono">DELL-XPS-15-9520</div>
+                    </div>
+                    <div>
+                      <div class="text-gray-500">Serial</div>
+                      <div class="text-white font-mono">7QK2X93</div>
+                    </div>
+                    <div>
+                      <div class="text-gray-500">Profile</div>
+                      <div class="text-white">Engineering Team</div>
+                    </div>
+                    <div>
+                      <div class="text-gray-500">Elapsed</div>
+                      <div class="text-white">8m 34s</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center text-gray-500 text-sm">Live imaging progress view</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 2: HTTP Fan-Out -->
+    <section class="py-24 px-6 bg-dark-surface/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1 relative animate-slide-left">
+            <div class="rounded-2xl bg-dark-surface border border-dark-border p-6">
+              <div class="text-center mb-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-cyan-500/10 rounded-full">
+                  <div class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></div>
+                  <span class="text-sm text-cyan-400">Distributing to 4 nodes</span>
+                </div>
+              </div>
+              <div class="flex items-center justify-center gap-8 mb-6">
+                <div class="text-center">
+                  <div class="w-16 h-16 rounded-xl bg-violet-600/20 flex items-center justify-center text-violet-400 mx-auto mb-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                    </svg>
+                  </div>
+                  <div class="text-xs text-gray-400">Portal</div>
+                </div>
+                <div class="flex-1 relative">
+                  <div class="h-0.5 bg-gradient-to-r from-violet-500 via-cyan-500 to-violet-500"></div>
+                  <div class="absolute -top-2 left-1/4 text-cyan-400 text-xs">HTTP Fan-Out</div>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <div class="w-12 h-12 rounded-lg bg-cyan-600/20 flex items-center justify-center text-cyan-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+                    </svg>
+                  </div>
+                  <div class="w-12 h-12 rounded-lg bg-cyan-600/20 flex items-center justify-center text-cyan-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+                    </svg>
+                  </div>
+                  <div class="w-12 h-12 rounded-lg bg-cyan-600/20 flex items-center justify-center text-cyan-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+                    </svg>
+                  </div>
+                  <div class="w-12 h-12 rounded-lg bg-cyan-600/20 flex items-center justify-center text-cyan-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex items-center gap-3 text-sm">
+                  <span class="text-gray-400 w-24">NYC-Node-01</span>
+                  <div class="flex-1 h-2 bg-dark-bg rounded-full overflow-hidden">
+                    <div class="h-full bg-cyan-500 rounded-full" style="width: 100%"></div>
+                  </div>
+                  <span class="text-cyan-400 w-12 text-right">Done</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm">
+                  <span class="text-gray-400 w-24">LA-Node-01</span>
+                  <div class="flex-1 h-2 bg-dark-bg rounded-full overflow-hidden">
+                    <div class="h-full bg-cyan-500 rounded-full" style="width: 78%"></div>
+                  </div>
+                  <span class="text-white w-12 text-right">78%</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm">
+                  <span class="text-gray-400 w-24">CHI-Node-01</span>
+                  <div class="flex-1 h-2 bg-dark-bg rounded-full overflow-hidden">
+                    <div class="h-full bg-cyan-500 rounded-full" style="width: 65%"></div>
+                  </div>
+                  <span class="text-white w-12 text-right">65%</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm">
+                  <span class="text-gray-400 w-24">LON-Node-01</span>
+                  <div class="flex-1 h-2 bg-dark-bg rounded-full overflow-hidden">
+                    <div class="h-full bg-cyan-500 rounded-full" style="width: 42%"></div>
+                  </div>
+                  <span class="text-white w-12 text-right">42%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2 animate-slide-right">
+            <span class="text-cyan-400 text-sm font-semibold uppercase tracking-wider">File Distribution</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              HTTP <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Fan-Out</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-6">
+              Efficiently distribute OS images, software packages, and driver packs to all your imaging nodes simultaneously. Upload once and stream to multiple locations at once.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-cyan-600/20 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Parallel Distribution</h3>
+                  <p class="text-gray-400 text-sm">Upload once, distribute everywhere. Data streams to all target nodes simultaneously.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-cyan-600/20 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Node-to-Node Replication</h3>
+                  <p class="text-gray-400 text-sm">Nodes on the same LAN can replicate files directly between each other at full network speed.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-cyan-600/20 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Integrity Verification</h3>
+                  <p class="text-gray-400 text-sm">SHA256 hash verification ensures every file arrives intact on every node.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 3: Image Factory -->
+    <section class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-slide-left">
+            <span class="text-emerald-400 text-sm font-semibold uppercase tracking-wider">Automated Builds</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Image <span class="bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">Factory</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-6">
+              Automatically build and maintain gold master images with the latest Windows Updates. Schedule monthly builds, validate automatically, and promote new images with a single click.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-emerald-600/20 flex items-center justify-center text-emerald-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Scheduled Builds</h3>
+                  <p class="text-gray-400 text-sm">Set up cron-based schedules to automatically build new gold images monthly with the latest updates.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-emerald-600/20 flex items-center justify-center text-emerald-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Hypervisor Integration</h3>
+                  <p class="text-gray-400 text-sm">Works with Proxmox, Hyper-V, and VMware vSphere to create and manage build VMs automatically.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-emerald-600/20 flex items-center justify-center text-emerald-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Lifecycle Management</h3>
+                  <p class="text-gray-400 text-sm">Images flow through Candidate → Current → Previous → Retired stages with automatic retention policies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative animate-slide-right">
+            <div class="rounded-2xl bg-dark-surface border border-dark-border p-6">
+              <h3 class="text-white font-semibold mb-4">Gold Image Pipeline</h3>
+              <div class="space-y-4">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-yellow-600/20 flex items-center justify-center text-yellow-400">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <div class="text-white text-sm font-medium">Win11-24H2-Jan</div>
+                    <div class="text-gray-500 text-xs">Building • 45% complete</div>
+                  </div>
+                  <span class="px-2 py-1 bg-yellow-500/10 text-yellow-400 text-xs rounded">Building</span>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-emerald-600/20 flex items-center justify-center text-emerald-400">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <div class="text-white text-sm font-medium">Win11-24H2-Dec</div>
+                    <div class="text-gray-500 text-xs">December 2024 • 4.2GB</div>
+                  </div>
+                  <span class="px-2 py-1 bg-emerald-500/10 text-emerald-400 text-xs rounded">Current</span>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-blue-600/20 flex items-center justify-center text-blue-400">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <div class="text-white text-sm font-medium">Win11-24H2-Nov</div>
+                    <div class="text-gray-500 text-xs">November 2024 • 4.1GB</div>
+                  </div>
+                  <span class="px-2 py-1 bg-blue-500/10 text-blue-400 text-xs rounded">Previous</span>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-gray-600/20 flex items-center justify-center text-gray-400">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <div class="text-white text-sm font-medium">Win11-24H2-Oct</div>
+                    <div class="text-gray-500 text-xs">October 2024 • 4.0GB</div>
+                  </div>
+                  <span class="px-2 py-1 bg-gray-500/10 text-gray-400 text-xs rounded">Retired</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 4: Profile Builder -->
+    <section class="py-24 px-6 bg-dark-surface/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1 relative animate-slide-left">
+            <div class="rounded-2xl bg-dark-surface border border-dark-border p-6">
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="text-white font-semibold">Engineering Team Profile</h3>
+                <span class="px-2 py-1 bg-violet-500/10 text-violet-400 text-xs rounded">Active</span>
+              </div>
+              <div class="space-y-4">
+                <div class="bg-dark-bg rounded-lg p-4">
+                  <div class="text-xs text-gray-500 uppercase tracking-wider mb-2">OS Image</div>
+                  <div class="text-white">Windows 11 Enterprise 24H2 (Gold)</div>
+                </div>
+                <div class="bg-dark-bg rounded-lg p-4">
+                  <div class="text-xs text-gray-500 uppercase tracking-wider mb-2">Software (6 apps)</div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-dark-surface rounded text-sm text-gray-300">VS Code</span>
+                    <span class="px-2 py-1 bg-dark-surface rounded text-sm text-gray-300">Git</span>
+                    <span class="px-2 py-1 bg-dark-surface rounded text-sm text-gray-300">Node.js</span>
+                    <span class="px-2 py-1 bg-dark-surface rounded text-sm text-gray-300">Docker</span>
+                    <span class="px-2 py-1 bg-dark-surface rounded text-sm text-gray-300">Chrome</span>
+                    <span class="px-2 py-1 bg-dark-surface rounded text-sm text-gray-300">Slack</span>
+                  </div>
+                </div>
+                <div class="bg-dark-bg rounded-lg p-4">
+                  <div class="text-xs text-gray-500 uppercase tracking-wider mb-2">Configuration</div>
+                  <div class="grid grid-cols-2 gap-2 text-sm">
+                    <div class="text-gray-400">Hostname:</div>
+                    <div class="text-white font-mono">{'{SERIAL}'}</div>
+                    <div class="text-gray-400">Domain Join:</div>
+                    <div class="text-emerald-400">Enabled</div>
+                    <div class="text-gray-400">BitLocker:</div>
+                    <div class="text-emerald-400">Enabled</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2 animate-slide-right">
+            <span class="text-violet-400 text-sm font-semibold uppercase tracking-wider">Configuration Templates</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Imaging <span class="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">Profiles</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-6">
+              Create complete imaging configurations that define exactly how devices should be set up. Bundle OS images, software, drivers, scripts, and system settings into reusable profiles.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-violet-600/20 flex items-center justify-center text-violet-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Task Sequencing</h3>
+                  <p class="text-gray-400 text-sm">Define the exact order: OS → Drivers → Software → Scripts → Updates → Domain Join → Cleanup.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-violet-600/20 flex items-center justify-center text-violet-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Dynamic Naming</h3>
+                  <p class="text-gray-400 text-sm">Use variables like {`{SERIAL}`}, {`{MODEL}`}, {`{MAC}`} to auto-generate computer names.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-violet-600/20 flex items-center justify-center text-violet-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Clone & Modify</h3>
+                  <p class="text-gray-400 text-sm">Start from existing profiles and customize for different departments or use cases.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 5: Driver Management -->
+    <section class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-slide-left">
+            <span class="text-orange-400 text-sm font-semibold uppercase tracking-wider">Hardware Support</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Smart Driver <span class="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">Injection</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-6">
+              Automatically detect hardware during imaging and inject the correct drivers. Our PnP detection system matches Vendor and Device IDs to your driver library—no more missing drivers.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-orange-600/20 flex items-center justify-center text-orange-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Smart Detection Mode</h3>
+                  <p class="text-gray-400 text-sm">Automatically matches detected PnP hardware to the correct drivers in your library.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-orange-600/20 flex items-center justify-center text-orange-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Driver Packs</h3>
+                  <p class="text-gray-400 text-sm">Organize drivers by manufacturer, model, or category. Import entire driver packs at once.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-orange-600/20 flex items-center justify-center text-orange-400 flex-shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Compatibility Reports</h3>
+                  <p class="text-gray-400 text-sm">Track which hardware is detected across your fleet and identify unmatched devices.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative animate-slide-right">
+            <div class="rounded-2xl bg-dark-surface border border-dark-border p-6">
+              <h3 class="text-white font-semibold mb-4">Hardware Detected</h3>
+              <div class="space-y-3">
+                <div class="flex items-center justify-between p-3 bg-dark-bg rounded-lg">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded bg-emerald-600/20 flex items-center justify-center text-emerald-400">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="text-white text-sm">Intel Wi-Fi 6E AX211</div>
+                      <div class="text-gray-500 text-xs">Network Adapter</div>
+                    </div>
+                  </div>
+                  <span class="text-emerald-400 text-xs">Matched</span>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-dark-bg rounded-lg">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded bg-emerald-600/20 flex items-center justify-center text-emerald-400">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="text-white text-sm">NVIDIA GeForce RTX 4070</div>
+                      <div class="text-gray-500 text-xs">Display Adapter</div>
+                    </div>
+                  </div>
+                  <span class="text-emerald-400 text-xs">Matched</span>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-dark-bg rounded-lg">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded bg-emerald-600/20 flex items-center justify-center text-emerald-400">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="text-white text-sm">Realtek Audio</div>
+                      <div class="text-gray-500 text-xs">Audio Device</div>
+                    </div>
+                  </div>
+                  <span class="text-emerald-400 text-xs">Matched</span>
+                </div>
+              </div>
+              <div class="mt-4 pt-4 border-t border-dark-border text-center">
+                <span class="text-emerald-400 text-sm font-medium">100% driver coverage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 6: Software & Scripts -->
+    <section class="py-24 px-6 bg-dark-surface/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-blue-400 text-sm font-semibold uppercase tracking-wider">Application Management</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+            Software Catalog & <span class="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Scripts Library</span>
+          </h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            Maintain a central library of software packages and automation scripts. Everything installs silently during imaging—no user interaction required.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-dark-surface border border-dark-border rounded-2xl p-8">
+            <div class="w-14 h-14 rounded-xl bg-blue-600/20 flex items-center justify-center text-blue-400 mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-white mb-4">Software Catalog</h3>
+            <p class="text-gray-400 mb-6">
+              Pre-configure software packages with silent install switches. Organize by category, track versions, and maintain consistency across all deployments.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-2 text-gray-300">
+                <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Silent installation parameters
+              </li>
+              <li class="flex items-center gap-2 text-gray-300">
+                <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Version tracking and updates
+              </li>
+              <li class="flex items-center gap-2 text-gray-300">
+                <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Usage analytics per package
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-dark-surface border border-dark-border rounded-2xl p-8">
+            <div class="w-14 h-14 rounded-xl bg-indigo-600/20 flex items-center justify-center text-indigo-400 mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-white mb-4">Scripts Library</h3>
+            <p class="text-gray-400 mb-6">
+              Store PowerShell, Batch, or Python scripts for pre-imaging and post-imaging automation. Domain joins, registry tweaks, custom configurations—all automated.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-2 text-gray-300">
+                <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Pre and post-imaging stages
+              </li>
+              <li class="flex items-center gap-2 text-gray-300">
+                <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Run as System or User context
+              </li>
+              <li class="flex items-center gap-2 text-gray-300">
+                <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Configurable timeouts
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engraving Section -->
+    <section class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-slide-left">
+            <span class="text-amber-400 text-sm font-semibold uppercase tracking-wider">Asset Branding</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">
+              Professional Device <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Engraving</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+              Brand your devices with permanent laser engraving. Asset tags, company logos, employee names, and QR codes—all professionally etched into the device chassis.
+            </p>
+
+            <ul class="space-y-4 mb-8">
+              {engravingFeatures.map((feature) => (
+                <li class="flex items-center gap-3">
+                  <div class="w-6 h-6 rounded-full bg-amber-600/20 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span class="text-gray-300">{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a href="/contact" class="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold transition-colors">
+              Learn more about engraving
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Screenshot recommendation: Photo of actual engraved laptop lid showing company logo, asset tag, and QR code -->
+          <div class="relative animate-slide-right">
+            <div class="rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-6 border border-dark-border shadow-2xl">
+              <!-- Laptop lid mockup -->
+              <div class="relative bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl aspect-[4/3] flex items-center justify-center overflow-hidden">
+                <!-- Simulated brushed metal texture -->
+                <div class="absolute inset-0 opacity-20" style="background-image: repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px);"></div>
+
+                <!-- Engraved content area -->
+                <div class="relative z-10 text-center space-y-6">
+                  <!-- Company logo (etched look) -->
+                  <div class="mx-auto w-32 h-12 rounded border-2 border-gray-500/50 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(120,120,120,0.3) 0%, rgba(80,80,80,0.3) 100%);">
+                    <span class="text-gray-400/80 font-bold text-lg tracking-wider" style="text-shadow: 1px 1px 0 rgba(0,0,0,0.5), -1px -1px 0 rgba(255,255,255,0.1);">ACME CORP</span>
+                  </div>
+
+                  <!-- Asset tag (etched) -->
+                  <div class="space-y-1">
+                    <div class="text-gray-500/70 text-xs tracking-widest">ASSET TAG</div>
+                    <div class="text-gray-400/80 font-mono text-sm tracking-wider" style="text-shadow: 1px 1px 0 rgba(0,0,0,0.5);">AC-2024-00847</div>
+                  </div>
+
+                  <!-- Real scannable QR Code for https://issyx.com (etched metal look) -->
+                  <div class="mx-auto w-20 h-20 rounded border border-gray-500/30 p-0.5" style="background: linear-gradient(135deg, rgba(90,90,90,0.3) 0%, rgba(70,70,70,0.3) 100%);">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" shape-rendering="crispEdges" class="w-full h-full">
+                      <path fill="rgba(80,80,80,0.5)" d="M0 0h33v33H0z"/>
+                      <path stroke="rgba(170,170,170,0.8)" d="M4 4.5h7m1 0h2m2 0h1m1 0h1m3 0h7M4 5.5h1m5 0h1m2 0h4m3 0h1m1 0h1m5 0h1M4 6.5h1m1 0h3m1 0h1m2 0h1m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1M4 7.5h1m1 0h3m1 0h1m1 0h4m2 0h1m1 0h1m1 0h1m1 0h3m1 0h1M4 8.5h1m1 0h3m1 0h1m1 0h3m2 0h4m1 0h1m1 0h3m1 0h1M4 9.5h1m5 0h1m1 0h2m1 0h4m1 0h1m1 0h1m5 0h1M4 10.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M12 11.5h2m4 0h1M4 12.5h1m3 0h1m1 0h3m3 0h4m1 0h5m2 0h1M5 13.5h1m1 0h2m2 0h1m3 0h2m2 0h3m2 0h2m1 0h1M6 14.5h1m1 0h1m1 0h1m2 0h2m2 0h3m1 0h1m1 0h1m1 0h2M5 15.5h2m2 0h1m2 0h3m1 0h2m2 0h1m1 0h1m1 0h1m1 0h2M9 16.5h2m4 0h3m3 0h3m1 0h4M4 17.5h1m2 0h1m3 0h3m3 0h5m2 0h1m2 0h1M6 18.5h5m2 0h1m5 0h3m1 0h4M6 19.5h2m1 0h1m1 0h4m1 0h1m1 0h1m3 0h3m1 0h2M4 20.5h4m2 0h1m1 0h2m1 0h1m1 0h10M12 21.5h2m2 0h1m3 0h1m3 0h1M4 22.5h7m1 0h2m1 0h4m1 0h1m1 0h1m1 0h1M4 23.5h1m5 0h1m2 0h3m1 0h1m1 0h2m3 0h3M4 24.5h1m1 0h3m1 0h1m1 0h2m2 0h2m2 0h7m1 0h1M4 25.5h1m1 0h3m1 0h1m2 0h1m3 0h2m2 0h3m2 0h3M4 26.5h1m1 0h3m1 0h1m2 0h1m5 0h1m2 0h1m2 0h1m1 0h1M4 27.5h1m5 0h1m2 0h1m2 0h1m1 0h1m2 0h7M4 28.5h7m1 0h2m1 0h1m1 0h3m1 0h2m3 0h3"/>
+                    </svg>
+                  </div>
+
+                  <!-- Employee name -->
+                  <div class="text-gray-400/70 text-sm italic tracking-wide" style="text-shadow: 1px 1px 0 rgba(0,0,0,0.5);">Sarah Chen • IT Department</div>
+                </div>
+
+                <!-- Laser beam effect -->
+                <div class="absolute top-4 right-4 w-1 h-8 bg-gradient-to-b from-amber-400 to-transparent opacity-60 blur-sm animate-pulse"></div>
+              </div>
+
+              <!-- Caption -->
+              <div class="mt-4 text-center">
+                <p class="text-amber-400 font-semibold text-sm">Precision Laser Engraving</p>
+                <p class="text-gray-500 text-xs mt-1">Permanent • Professional • Durable</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 px-6 bg-dark-surface/50">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to transform your device deployment?</h2>
+        <p class="text-xl text-gray-400 mb-8">See how Issyx Imaging can streamline your provisioning workflow.</p>
+        <a href="/contact" class="btn-primary text-lg">Schedule a Demo</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

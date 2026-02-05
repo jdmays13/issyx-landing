@@ -1,0 +1,116 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Issyx Unified - Device Lifecycle Management Platform',
+  description = 'The complete platform for device lifecycle management. Deploy, manage, and secure your entire device fleet with imaging, MDM, and warehouse operations.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="/og-image.png" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={Astro.url} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-dark-bg text-white antialiased">
+    <slot />
+
+    <!-- Scroll-Progress Animation -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const animatedElements = document.querySelectorAll('.animate-slide-left, .animate-slide-right, .animate-fade-up, .animate-on-scroll');
+
+        if (animatedElements.length === 0) return;
+
+        function getScrollProgress(element: Element): number {
+          const rect = element.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+
+          // Start animating when element top enters bottom 20% of viewport
+          // Complete when element top reaches 60% from top of viewport
+          const startPoint = windowHeight * 0.9;
+          const endPoint = windowHeight * 0.4;
+
+          // Calculate progress (0 = not started, 1 = complete)
+          const progress = (startPoint - rect.top) / (startPoint - endPoint);
+
+          return Math.max(0, Math.min(1, progress));
+        }
+
+        function updateAnimations() {
+          animatedElements.forEach(el => {
+            const progress = getScrollProgress(el);
+            const htmlEl = el as HTMLElement;
+
+            // Determine animation type and apply transform
+            if (el.classList.contains('animate-slide-left')) {
+              const translateX = 60 * (1 - progress);
+              htmlEl.style.transform = `translateX(${-translateX}px)`;
+              htmlEl.style.opacity = String(progress);
+            } else if (el.classList.contains('animate-slide-right')) {
+              const translateX = 60 * (1 - progress);
+              htmlEl.style.transform = `translateX(${translateX}px)`;
+              htmlEl.style.opacity = String(progress);
+            } else if (el.classList.contains('animate-fade-up') || el.classList.contains('animate-on-scroll')) {
+              const translateY = 40 * (1 - progress);
+              htmlEl.style.transform = `translateY(${translateY}px)`;
+              htmlEl.style.opacity = String(progress);
+            }
+          });
+        }
+
+        // Update on scroll with throttling
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              updateAnimations();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }, { passive: true });
+
+        // Initial update
+        updateAnimations();
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>
