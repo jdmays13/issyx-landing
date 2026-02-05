@@ -95,6 +95,9 @@ import Footer from '../components/Footer.astro';
           <div class="bg-dark-surface border border-dark-border rounded-2xl p-8">
             <h2 class="text-2xl font-bold text-white mb-6">Request a demo</h2>
 
+            <!-- Error message (hidden by default) -->
+            <div id="error-message" class="hidden p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 text-sm mb-4"></div>
+
             <form id="contact-form" class="space-y-6">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
@@ -220,15 +223,59 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <script>
-  const form = document.getElementById('contact-form');
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
   const successMessage = document.getElementById('success-message');
+  const errorMessage = document.getElementById('error-message');
 
-  form?.addEventListener('submit', (e) => {
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // In a real implementation, you would send the form data to your backend
-    // For now, we'll just show the success message
-    form.classList.add('hidden');
-    successMessage?.classList.remove('hidden');
+    const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    // Hide any previous error
+    errorMessage?.classList.add('hidden');
+
+    const formData = new FormData(form);
+    const data = {
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      email: formData.get('email'),
+      company: formData.get('company'),
+      deviceCount: formData.get('deviceCount'),
+      interest: formData.get('interest'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        form.classList.add('hidden');
+        successMessage?.classList.remove('hidden');
+      } else {
+        const result = await response.json();
+        showError(result.error || 'Something went wrong. Please try again or email us at sales@issyx.com');
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    } catch {
+      showError('Network error. Please try again or email us at sales@issyx.com');
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
   });
+
+  function showError(message: string) {
+    if (errorMessage) {
+      errorMessage.textContent = message;
+      errorMessage.classList.remove('hidden');
+    }
+  }
 </script>
